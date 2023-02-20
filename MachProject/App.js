@@ -2,9 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
 import React, { useState } from 'react';
 import Header from "./components/header";
-
-const currentPoints = 50;
-const maxPoints = 100;
+import filledStar from "./images/star_filled.png";
+import emptyStar from "./images/star_corner.png";
 
 const images = [
     { source: require('./images/homepic1.jpeg') },
@@ -14,6 +13,12 @@ const images = [
 
 function LevelBar(props){
     const [currentPoints, setCurrentPoints] = useState(props.currentPoints);
+
+    const increasePoints = () =>{
+        const newPoints = 1000;
+        setCurrentPoints(newPoints);
+    }
+
     let maxPoints = 100;
     let machID = 'Badass'
     let nextMachID = 'Complete';
@@ -23,27 +28,115 @@ function LevelBar(props){
         machID = "Legend"
 
     } else if (currentPoints > 10000) { //MACH HERO
-        maxPoints = 25000;
+        maxPoints = 30000;
         machID = 'Hero'
         nextMachID = 'Legend';
 
     } else if (currentPoints > 4500) { //MACH ICON
-        maxPoints = 7500;
+        maxPoints = 10000;
         machID = 'Icon'
         nextMachID = 'Hero';
 
     } else if (currentPoints > 1750) { //MACH STAR
-        maxPoints = 4000;
+        maxPoints = 4500;
         machID = 'Star'
         nextMachID = 'Icon';
 
     } else{ //MACH BADASS
-        maxPoints = 1500;
+        maxPoints = 1750;
         nextMachID = 'Star';
     }
 
     const progress = (currentPoints / maxPoints) * 100;
     const diff = (maxPoints - currentPoints);
+
+    //Star Bar
+    const emptyStar = require('./images/star_corner.png');
+    const filledStar = require('./images/star_filled.png');
+    const stars = [];
+
+    if (machID == 'Legend'){
+        for (let i = 0; i < 5; i++) {
+            stars.push(
+                <Image
+                    key={i}
+                    source={filledStar}
+                    style={{ width: 50, height: 50 }}
+                />
+            );
+        }
+    } else if (machID == 'Hero'){
+        for (let i = 0; i < 4; i++) {
+            stars.push(
+                <Image
+                    key={i}
+                    source={filledStar}
+                    style={{ width: 50, height: 50 }}
+                />
+            );
+        }
+        stars.push(
+            <Image
+                source={emptyStar}
+                style={{ width: 50, height: 50 }}
+            />
+        );
+    } else if (machID == 'Icon') {
+        for (let i = 0; i < 3; i++) {
+            stars.push(
+                <Image
+                    key={i}
+                    source={filledStar}
+                    style={{width: 50, height: 50}}
+                />
+            );
+        }
+        for (let i = 3; i < 5; i++) {
+            stars.push(
+                <Image
+                    key={i}
+                    source={emptyStar}
+                    style={{width: 50, height: 50}}
+                />
+            );
+        }
+    } else if (machID == 'Star') {
+        for (let i = 0; i < 2; i++) {
+            stars.push(
+                <Image
+                    key={i}
+                    source={filledStar}
+                    style={{width: 50, height: 50}}
+                />
+            );
+        }
+        for (let i = 2; i < 5; i++) {
+            stars.push(
+                <Image
+                    key={i}
+                    source={emptyStar}
+                    style={{width: 50, height: 50}}
+                />
+            );
+        }
+    } else{
+        stars.push(
+            <Image
+                key={0}
+                source={filledStar}
+                style={{width: 50, height: 50}}
+            />
+        );
+        for (let i = 1; i < 5; i++) {
+            stars.push(
+                <Image
+                    key={i}
+                    source={emptyStar}
+                    style={{width: 50, height: 50}}
+                />
+            );
+        }
+    }
 
     return (
         <View style={{alignItems: 'center'}}>
@@ -51,7 +144,7 @@ function LevelBar(props){
                 <Text style={[styles.text, {fontSize: 20}]}>Mach {machID}</Text>
             </View>
             <View>
-                <Text style={styles.massive}>*****</Text>
+                    <Text>{stars}</Text>
             </View>
             <Text style={[styles.text, {marginBottom: 5}]}>{diff} points to Mach {nextMachID} </Text>
             <View style={{ flexDirection: 'row', alignItems: 'flex-end'}}>
@@ -96,14 +189,13 @@ function LevelBar(props){
     );
 }
 export default function App() {
-    // const fillPercentage = (currentPoints / maxPoints) * 100;
 
     return (
     <View style={styles.container}>
       <Header />
       <StatusBar style="auto" />
         <View>
-            <LevelBar currentPoints={350} />
+            <LevelBar currentPoints={12000}/>
         </View>
 
         <View>
