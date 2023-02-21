@@ -2,8 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
 import React, { useState } from 'react';
 import Header from "./components/header";
-import filledStar from "./images/star_filled.png";
-import emptyStar from "./images/star_corner.png";
 
 const images = [
     { source: require('./images/homepic1.jpeg') },
@@ -154,8 +152,6 @@ function LevelBar(props){
                         backgroundColor: '#DDD',
                         borderRadius: 5,
                         width: '80%',
-                        //flex: 1,
-                        //margin: 2,
                     }}
                 >
                     <View
@@ -197,11 +193,10 @@ export default function App() {
         <View>
             <LevelBar currentPoints={12000}/>
         </View>
-
         <View>
-            <Text style={styles.text}>Recent Uploads</Text>
+            <Text style={[styles.text, {alignItems: 'center', justifyContent: 'center', marginBottom: -5}]}>Recent Uploads</Text>
         </View>
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, marginBottom: -100 }}>
             <FlatList
                 data={images}
                 horizontal
@@ -211,16 +206,18 @@ export default function App() {
                 )}
             />
         </View>
-        <View style={styles.button}>
-            <Text> Upload Image </Text>
-        </View>
+        <View style={{ flex: 1, justifyContent: 'flex-start' }}>
+            <View style={styles.button}>
+                <Text> Upload Image </Text>
+            </View>
 
-        <View style={styles.button}>
-            <Text> Duty Request </Text>
-        </View>
+            <View style={styles.button}>
+                <Text> Duty Request </Text>
+            </View>
 
-        <View style={styles.button}>
-            <Text> Team Leaderboard </Text>
+            <View style={styles.button}>
+                <Text> Team Leaderboard </Text>
+            </View>
         </View>
 
     </View>
