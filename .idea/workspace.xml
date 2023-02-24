@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MachProject/RootNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/assets/mach-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/components/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/components/settings.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +45,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brady\WebstormProjects\G2-Mach\MachProject\components" />
+      <recent name="C:\Users\brady\WebstormProjects\G2-Mach\MachProject" />
+      <recent name="C:\Users\brady\WebstormProjects\G2-Mach\MachProject\assets" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,6 +63,7 @@
       <workItem from="1676653196350" duration="3197000" />
       <workItem from="1676846036591" duration="9344000" />
       <workItem from="1676999883787" duration="1077000" />
+      <workItem from="1677251379832" duration="581000" />
     </task>
     <servers />
   </component>
