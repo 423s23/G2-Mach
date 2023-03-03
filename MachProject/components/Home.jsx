@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
+import {StyleSheet, Text, View, Image, FlatList, Button} from 'react-native';
 import React, { useState } from 'react';
 import { withNavigation } from 'react-navigation';
 
@@ -75,6 +75,7 @@ function LevelBar(props){
         }
         stars.push(
             <Image
+                key={4}
                 source={emptyStar}
                 style={{ width: 50, height: 50 }}
             />
@@ -190,7 +191,7 @@ function Home( { navigation }) {
         <View style={styles.container}>
             <StatusBar style="auto" />
             <View>
-                <LevelBar currentPoints={12000}/>
+                <LevelBar currentPoints={5000}/>
             </View>
             <View>
                 <Text style={[styles.text, {alignItems: 'center', justifyContent: 'center', marginBottom: -5}]}>Recent Uploads</Text>
@@ -207,6 +208,10 @@ function Home( { navigation }) {
             </View>
             <View style={{ flex: 1, justifyContent: 'flex-start' }}>
                 <View style={styles.button}>
+                    {/*<Button>*/}
+                    {/*    title="Upload Image"*/}
+                    {/*    onPress={()=> navigation.navigate('Home')}*/}
+                    {/*</Button>*/}
                     <Text> Upload Image </Text>
                 </View>
 

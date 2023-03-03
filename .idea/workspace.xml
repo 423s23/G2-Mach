@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MachProject/RootNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/assets/mach-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/components/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/components/settings.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +58,10 @@
       <workItem from="1676846036591" duration="9344000" />
       <workItem from="1676999883787" duration="1077000" />
       <workItem from="1677251379832" duration="581000" />
+      <workItem from="1677257511102" duration="3638000" />
+      <workItem from="1677700160664" duration="32000" />
+      <workItem from="1677718566462" duration="745000" />
+      <workItem from="1677863243172" duration="3129000" />
     </task>
     <servers />
   </component>
