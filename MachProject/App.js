@@ -7,9 +7,14 @@ import * as React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
 
+import * as SQLite from 'expo-sqlite';
+import {useState, useEffect } from "react";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+    const db = SQLite.openDatabase('Mach.db');
+
     return (
 
         <NavigationContainer ref={navigationRef}>
