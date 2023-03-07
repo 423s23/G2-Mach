@@ -11,11 +11,6 @@ function Profile( { navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.button}>
-                {/*<Button style={styles.buttonText}*/}
-                {/*    onPress={() => navigationRef.current?.navigate('Settings')}*/}
-                {/*    title={"Settings"}*/}
-                {/*    color="#000000"*/}
-                {/*/>*/}
                 <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Settings')}>
                     <Text style={styles.buttonText}>Settings</Text>
                 </Pressable>
