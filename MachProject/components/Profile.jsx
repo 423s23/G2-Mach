@@ -1,12 +1,24 @@
 import * as React from 'react';
-import {StyleSheet, Text, View} from "react-native";
+import {Button, Pressable, StyleSheet, Text, View} from "react-native";
 import { withNavigation } from 'react-navigation';
+import {navigationRef} from "../RootNavigation";
+import Settings from "./settings"
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 function Profile( { navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.button}>
-                <Text style={styles.buttonText}>Settings</Text>
+                {/*<Button style={styles.buttonText}*/}
+                {/*    onPress={() => navigationRef.current?.navigate('Settings')}*/}
+                {/*    title={"Settings"}*/}
+                {/*    color="#000000"*/}
+                {/*/>*/}
+                <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Settings')}>
+                    <Text style={styles.buttonText}>Settings</Text>
+                </Pressable>
             </View>
             <View style={styles.button}>
                 <Text style={styles.buttonText}>Posts</Text>
@@ -18,6 +30,7 @@ function Profile( { navigation }) {
                 <Text style={styles.buttonText}>Log Out</Text>
             </View>
         </View>
+
     );
 };
 const styles = StyleSheet.create({
@@ -36,6 +49,13 @@ const styles = StyleSheet.create({
         padding: 15,
         width: 250,
         marginTop: 30,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 15
+    },
+    press: {
+        backgroundColor: '#6bd0f6',
+        width: 250,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 15

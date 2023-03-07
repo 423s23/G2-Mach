@@ -6,7 +6,7 @@ import {NavigationContainer, useNavigation} from "@react-navigation/native";
 import * as React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
-import SettingsLogo from "./images/settings-outline.svg"
+import Profile from './components/Profile'
 
 import * as SQLite from 'expo-sqlite';
 import {useState, useEffect } from "react";
@@ -28,8 +28,8 @@ export default function App() {
                         headerTitle: (props) => <LogoTitle {...props} />,
                         headerRight: () => (
                             <Button
-                                onPress={() => navigationRef.current?.navigate('Settings')}
-                                title={"Settings"}
+                                onPress={() => navigationRef.current?.navigate('Profile')}
+                                title={"Profile"}
                                 color="#6bd0f6"
                             />
                         ),
@@ -37,6 +37,16 @@ export default function App() {
                             backgroundColor: '#000',
                         },
                     }}
+                />
+                <Stack.Screen
+                    name="Profile"
+                    component={Profile}
+                    options={
+                        {
+                            headerStyle: {
+                                backgroundColor: '#6bd0f6',
+                            }
+                        }}
                 />
                 <Stack.Screen
                     name="Settings"
