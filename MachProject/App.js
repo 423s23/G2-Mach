@@ -2,21 +2,24 @@
 import {Button, Image, StyleSheet} from 'react-native';
 import Home from "./components/Home";
 import Settings from "./components/settings";
-import {NavigationContainer, useNavigation} from "@react-navigation/native";
+//import {NavigationContainer, useNavigation} from "@react-navigation/native";
 import * as React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
-import SettingsLogo from "./images/settings-outline.svg"
+//import SettingsLogo from "./images/settings-outline.svg"
+import NavBar from "./components/navBar";
 
 import * as SQLite from 'expo-sqlite';
 import {useState, useEffect } from "react";
 
-const Stack = createNativeStackNavigator();
+//const Stack = createNativeStackNavigator();
 
 export default function App() {
     const db = SQLite.openDatabase('Mach.db');
 
     return (
+
+        /*
 
         <NavigationContainer ref={navigationRef}>
             <Stack.Navigator>
@@ -48,8 +51,11 @@ export default function App() {
                             }
                         }}
                 />
+                <NavBar/>
             </Stack.Navigator>
         </NavigationContainer>
+        */
+       <NavBar/>
     );
 }
 
