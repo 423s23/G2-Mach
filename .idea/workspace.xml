@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="adding SQLite to app.js&#10;added to documentation that in terminal you'll need to do &quot;npx expo install expo-sqlite&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/components/Leaderboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/components/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/components/Tasks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package-lock.json" afterDir="false" />
@@ -67,6 +69,7 @@
       <workItem from="1677863243172" duration="14925000" />
       <workItem from="1677988409619" duration="2029000" />
       <workItem from="1678127544756" duration="2006000" />
+      <workItem from="1678207948035" duration="1118000" />
     </task>
     <servers />
   </component>
