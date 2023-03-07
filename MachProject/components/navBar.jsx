@@ -11,18 +11,22 @@ import Home from './Home'
 import Leaderboard from './Leaderboard'
 import Profile from './Profile'
 import Tasks from './Tasks'
+import Settings from "./settings";
+import {navigationRef} from "../RootNavigation";
+import StackNavigator from "@react-navigation/stack/src/navigators/createStackNavigator";
+import {Screen} from "react-native-screens";
 
 //Screen names
 const homeName = 'Home'
 const tasksName = 'Tasks'
 const leaderboardName = 'Leaderboard'
 const profileName = 'Profile'
+const settingsName = 'Settings'
 
 const Tab = createBottomTabNavigator()
 
 export default function NavBar() {
     return (
-        <NavigationContainer>
             <Tab.Navigator
             initialRouteName={homeName}
             screenOptions={({route}) => ({
@@ -48,9 +52,6 @@ export default function NavBar() {
                 <Tab.Screen name={tasksName} options={{headerShown: false}} component={Tasks}/>
                 <Tab.Screen name={leaderboardName} options={{headerShown: false}} component={Leaderboard}/>
                 <Tab.Screen name={profileName} options={{headerShown: false}} component={Profile}/>
-
             </Tab.Navigator>
-
-        </NavigationContainer>
     )
 }

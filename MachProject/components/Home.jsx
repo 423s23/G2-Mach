@@ -138,9 +138,9 @@ function LevelBar(props){
     }
 
     return (
-        <View style={{alignItems: 'center'}}>
+        <View style={{alignItems: 'center', marginTop: 60}}>
             <View>
-                <Text style={[styles.text, {fontSize: 20}]}>Mach {machID}</Text>
+                <Text style={[styles.text, {fontSize: 40}]}>Mach {machID}</Text>
             </View>
             <View>
                 <Text>{stars}</Text>

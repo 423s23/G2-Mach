@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="added new pages">
+    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="cleaned up code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/navBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/settings.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
       <workItem from="1677863243172" duration="14925000" />
       <workItem from="1677988409619" duration="2029000" />
       <workItem from="1678127544756" duration="2006000" />
-      <workItem from="1678207948035" duration="3372000" />
+      <workItem from="1678207948035" duration="5851000" />
     </task>
     <task id="LOCAL-00001" summary="added new pages">
       <created>1678209105435</created>
@@ -74,7 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678209105435</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fuck everything i just did">
+      <created>1678212492081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678212492081</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cleaned up code">
+      <created>1678212692648</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678212692648</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding SQLite to app.js&#10;added to documentation that in terminal you'll need to do &quot;npx expo install expo-sqlite&quot;" />
     <MESSAGE value="added new pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new pages" />
+    <MESSAGE value="fuck everything i just did" />
+    <MESSAGE value="cleaned up code" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up code" />
   </component>
 </project>

@@ -6,9 +6,6 @@ function Settings( { navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.button}>
-                <Text style={styles.buttonText}>Profile</Text>
-            </View>
-            <View style={styles.button}>
                 <Text style={styles.buttonText}>User Settings</Text>
             </View>
             <View style={styles.button}>
