@@ -6,6 +6,7 @@ import {NavigationContainer, useNavigation} from "@react-navigation/native";
 import * as React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
+import SettingsLogo from "./images/settings-outline.svg"
 
 import * as SQLite from 'expo-sqlite';
 import {useState, useEffect } from "react";
@@ -28,7 +29,7 @@ export default function App() {
                         headerRight: () => (
                             <Button
                                 onPress={() => navigationRef.current?.navigate('Settings')}
-                                title="Settings"
+                                title={"Settings"}
                                 color="#6bd0f6"
                             />
                         ),
