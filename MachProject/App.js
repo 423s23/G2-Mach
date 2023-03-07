@@ -2,21 +2,24 @@
 import {Button, Image, StyleSheet} from 'react-native';
 import Home from "./components/Home";
 import Settings from "./components/settings";
-import {NavigationContainer, useNavigation} from "@react-navigation/native";
+//import {NavigationContainer, useNavigation} from "@react-navigation/native";
 import * as React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
-import Profile from './components/Profile'
+//import SettingsLogo from "./images/settings-outline.svg"
+import NavBar from "./components/navBar";
 
 import * as SQLite from 'expo-sqlite';
 import {useState, useEffect } from "react";
 
-const Stack = createNativeStackNavigator();
+//const Stack = createNativeStackNavigator();
 
 export default function App() {
     const db = SQLite.openDatabase('Mach.db');
 
     return (
+
+        /*
 
         <NavigationContainer ref={navigationRef}>
             <Stack.Navigator>
@@ -28,8 +31,8 @@ export default function App() {
                         headerTitle: (props) => <LogoTitle {...props} />,
                         headerRight: () => (
                             <Button
-                                onPress={() => navigationRef.current?.navigate('Profile')}
-                                title={"Profile"}
+                                onPress={() => navigationRef.current?.navigate('Settings')}
+                                title={"Settings"}
                                 color="#6bd0f6"
                             />
                         ),
@@ -37,16 +40,6 @@ export default function App() {
                             backgroundColor: '#000',
                         },
                     }}
-                />
-                <Stack.Screen
-                    name="Profile"
-                    component={Profile}
-                    options={
-                        {
-                            headerStyle: {
-                                backgroundColor: '#6bd0f6',
-                            }
-                        }}
                 />
                 <Stack.Screen
                     name="Settings"
@@ -58,8 +51,11 @@ export default function App() {
                             }
                         }}
                 />
+                <NavBar/>
             </Stack.Navigator>
         </NavigationContainer>
+        */
+       <NavBar/>
     );
 }
 
