@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="cleaned up code">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5eb39fed-fa51-471d-932b-f5d36852bef2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5eb39fed-fa51-471d-932b-f5d36852bef2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/navBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/settings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Tasks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,8 @@
       <workItem from="1677988409619" duration="2029000" />
       <workItem from="1678127544756" duration="2006000" />
       <workItem from="1678207948035" duration="5851000" />
+      <workItem from="1678219696814" duration="744000" />
+      <workItem from="1678290449815" duration="4280000" />
     </task>
     <task id="LOCAL-00001" summary="added new pages">
       <created>1678209105435</created>
