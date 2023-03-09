@@ -8,19 +8,20 @@ function Settings( { navigation }) {
     return (
         <View style={styles.container}>
             <View>
-                <Text style={styles.iconText}>Brady Ash</Text>
+                <Ionicons style={styles.icon} name="person-circle-outline" />
             </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Settings</Text>
+            <View style={styles.rowTop}>
+                <Text style={styles.rowText}>Username: BigBird</Text>
             </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Posts</Text>
+            <View style={styles.row}>
+                <Text style={styles.rowText}>Location: Bozeman, Wisconsin</Text>
             </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Points</Text>
+            <View style={styles.row}>
+                <Text style={styles.rowText}>Email: bradyash9@gmail.com</Text>
             </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Log Out</Text>
+            <View style={styles.row}>
+                <Text style={styles.rowText}>Mach Team: </Text>
+                <Text style={styles.rowTextRight}>Ultra-Marathon</Text>
             </View>
         </View>
 
@@ -31,7 +32,6 @@ export default withNavigation(Settings);
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 60,
         flex: 1,
         backgroundColor: '#ffffff',
         alignItems: 'center',
@@ -69,5 +69,34 @@ const styles = StyleSheet.create({
         fontSize: 50,
         textAlign: "center",
 
+    },
+    row: {
+        borderColor: '#808080',
+        borderBottomWidth: 3,
+        width: '100%',
+        flexDirection: "row",
+        alignContent: "center"
+    },
+    rowTop: {
+        borderColor: '#808080',
+        borderBottomWidth: 3,
+        borderTopWidth: 3,
+        textAlign: "left",
+        width: '100%'
+    },
+    rowText: {
+        textAlign: "left",
+        fontSize: 25,
+        paddingLeft: 10,
+        marginTop: 10,
+        marginBottom: 10
+    },
+    rowTextRight: {
+        textAlign: "right",
+        fontSize: 25,
+        paddingLeft: 10,
+        marginTop: 10,
+        marginBottom: 10
     }}
+
 );
