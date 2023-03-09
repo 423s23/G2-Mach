@@ -10,8 +10,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import Home from '../screens/Home'
 import Leaderboard from '../screens/Leaderboard'
 import Profile from '../screens/Profile'
-import Tasks from '../screens/Tasks'
-import Settings from "../screens/Settings";
+import Tasks from '../screens/TaskList'
 import {navigationRef} from "../RootNavigation";
 import StackNavigator from "@react-navigation/stack/src/navigators/createStackNavigator";
 import {Screen} from "react-native-screens";

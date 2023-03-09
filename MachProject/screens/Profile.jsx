@@ -37,10 +37,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         //justifyContent: "flex-start",
     },
-    massive: {
-        fontSize: 160,
-        color: "#FFE133"
-    },
     button: {
         backgroundColor: '#6bd0f6',
         padding: 15,
