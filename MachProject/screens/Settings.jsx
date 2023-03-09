@@ -11,13 +11,16 @@ function Settings( { navigation }) {
                 <Ionicons style={styles.icon} name="person-circle-outline" />
             </View>
             <View style={styles.rowTop}>
-                <Text style={styles.rowText}>Username: BigBird</Text>
+                <Text style={styles.rowText}>Username: </Text>
+                <Text style={styles.rowTextRight}>BigBird</Text>
             </View>
             <View style={styles.row}>
-                <Text style={styles.rowText}>Location: Bozeman, Wisconsin</Text>
+                <Text style={styles.rowText}>Location: </Text>
+                <Text style={styles.rowTextRight}>Bozeman, Montana</Text>
             </View>
             <View style={styles.row}>
-                <Text style={styles.rowText}>Email: bradyash9@gmail.com</Text>
+                <Text style={styles.rowText}>Email: </Text>
+                <Text style={styles.rowTextRight}>bradyash9@gmail.com</Text>
             </View>
             <View style={styles.row}>
                 <Text style={styles.rowText}>Mach Team: </Text>
@@ -75,28 +78,30 @@ const styles = StyleSheet.create({
         borderBottomWidth: 3,
         width: '100%',
         flexDirection: "row",
-        alignContent: "center"
+        justifyContent: "space-between"
     },
     rowTop: {
         borderColor: '#808080',
         borderBottomWidth: 3,
         borderTopWidth: 3,
         textAlign: "left",
-        width: '100%'
+        width: '100%',
+        flexDirection: "row",
+        justifyContent: "space-between"
     },
     rowText: {
         textAlign: "left",
         fontSize: 25,
         paddingLeft: 10,
         marginTop: 10,
-        marginBottom: 10
+        marginBottom: 10,
     },
     rowTextRight: {
         textAlign: "right",
         fontSize: 25,
-        paddingLeft: 10,
+        paddingRight: 10,
         marginTop: 10,
-        marginBottom: 10
+        marginBottom: 10,
     }}
 
 );
