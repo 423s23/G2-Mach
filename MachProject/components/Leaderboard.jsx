@@ -1,48 +1,46 @@
-import * as React from 'react';
-import {StyleSheet, Text, View} from "react-native";
-import { withNavigation } from 'react-navigation';
+import React from 'react'
+import {
+    SafeAreaView, View, StyleSheet, Text, Alert
+} from 'react-native'
+import { ButtonGroup } from './ButtonGroup'
 
-function Leaderboard( { navigation }) {
+
+const Leaderboard = () => {
+
+    
+    const printButtonLabel = (item) => {
+        //Alert.alert("damn")
+        return(
+            <View style={StyleSheet.container}>
+                <Text>TEST2</Text>
+            </View>
+        )
+    }
+    
+
     return (
-        <View style={styles.container}>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>#1 Homie</Text>
+        <SafeAreaView style={{flex: 1}}>
+            <View style={StyleSheet.container}>
+                <ButtonGroup
+                buttons={['Local', 'Nation']}
+                doSomethingAfterClick={printButtonLabel}
+                />
+
+                <Text>GEESE</Text>
             </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>#2 Homie</Text>
-            </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>#3 Homie</Text>
-            </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Terrance</Text>
-            </View>
-        </View>
-    );
-};
+        </SafeAreaView>
+    )
+}
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000000',
-        alignItems: 'center',
-        justifyContent: "flex-start",
+        padding: 10,
     },
-    massive: {
-        fontSize: 160,
-        color: "#FFE133"
-    },
-    button: {
-        backgroundColor: '#6bd0f6',
-        padding: 15,
-        width: 250,
-        marginTop: 30,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 15
-    },
-    buttonText: {
-        fontSize: 25
-    }}
-);
 
-export default withNavigation(Leaderboard);
+    text: {
+        fontSize: 100
+    }
+})
+
+export default Leaderboard
