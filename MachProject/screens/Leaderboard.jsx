@@ -20,13 +20,20 @@ const Leaderboard = () => {
 
     return (
         <SafeAreaView style={{flex: 1}}>
-            <View style={StyleSheet.container}>
+            <View style={styles.container}>
                 <ButtonGroup
                 buttons={['Local', 'Nation']}
                 doSomethingAfterClick={printButtonLabel}
                 />
-
-                <Text>GEESE</Text>
+            </View>
+            <View>
+                <Text style={styles.text}>#1 - 45,000: Maverick</Text>
+            </View>
+            <View>
+                <Text style={styles.text}>#2 - 44,960: Goose</Text>
+            </View>
+            <View>
+                <Text style={styles.text}>#3 - 1: Tim</Text>
             </View>
         </SafeAreaView>
     )
@@ -34,12 +41,15 @@ const Leaderboard = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        padding: 10,
+        paddingTop: 10,
+        paddingBottom: 25,
     },
 
     text: {
-        fontSize: 100
+        paddingTop: 15,
+        fontSize: 25,
+        flexDirection: "column",
+        marginLeft: 10
     }
 })
 
