@@ -4,20 +4,12 @@ import { withNavigation } from 'react-navigation';
 
 function Tasks( { navigation }) {
     return (
-        <View style={styles.container}>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Task1</Text>
-            </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Task2</Text>
-            </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Task3</Text>
-            </View>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Log Out</Text>
-            </View>
+    <View>
+        <View>
         </View>
+        <View>
+        </View>
+    </View>
     );
 };
 const styles = StyleSheet.create({
