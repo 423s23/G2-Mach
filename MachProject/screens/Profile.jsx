@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Button, Pressable, StyleSheet, Text, View} from "react-native";
 import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
-import Settings from "./settings"
+import Settings from "./Settings"
 
 function Profile( { navigation }) {
     return (

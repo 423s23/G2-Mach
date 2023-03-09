@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="cleaned up code">
+      <change afterPath="$PROJECT_DIR$/MachProject/components/NavBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/db/examples.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/tests/Database.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/tests/Navigation.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Developer Notes.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/documentation/Developer Notes.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/Tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/tests/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/assets/adaptive-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/adaptive-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/assets/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/assets/mach-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/mach-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/Leaderboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Leaderboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/components/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/navBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/settings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,16 +58,96 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joshfried/Downloads/School/GitHub/G2-Mach/MachProject/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MachProject/documentation" />
+      <recent name="$PROJECT_DIR$/MachProject/components" />
+      <recent name="$PROJECT_DIR$/MachProject/screens" />
+      <recent name="$PROJECT_DIR$/MachProject/images" />
       <recent name="C:\Users\brady\WebstormProjects\G2-Mach\MachProject\components" />
-      <recent name="C:\Users\brady\WebstormProjects\G2-Mach\MachProject" />
-      <recent name="C:\Users\brady\WebstormProjects\G2-Mach\MachProject\assets" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.Database">
+    <configuration name="Database" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/MachProject/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/MachProject" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/MachProject/tests/Database.test.js" />
+      <test-names>
+        <test-name value="Database" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="NavBar" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/MachProject/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/MachProject" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/MachProject/tests/Navigation.test.js" />
+      <test-names>
+        <test-name value="NavBar" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Navbar" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/MachProject/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/MachProject" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/MachProject/tests/Navigation.test.js" />
+      <test-names>
+        <test-name value="Navbar" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Navigation" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/MachProject/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/MachProject" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/MachProject/tests/Navigation.test.js" />
+      <test-names>
+        <test-name value="Navigation" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;App /&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/MachProject/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/MachProject" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/MachProject/tests/App.test.js" />
+      <test-names>
+        <test-name value="&lt;App /&gt;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Database" />
+        <item itemvalue="Jest.NavBar" />
+        <item itemvalue="Jest.&lt;App /&gt;" />
+        <item itemvalue="Jest.Navbar" />
+        <item itemvalue="Jest.Navigation" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

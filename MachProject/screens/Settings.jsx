@@ -4,7 +4,7 @@ import { withNavigation } from 'react-navigation';
 
 function Settings( { navigation }) {
     return (
-        <View style={styles.container}>
+        <View style={styles.container} testID={"settings-screen"}>
             <View style={styles.button}>
                 <Text style={styles.buttonText}>User Settings</Text>
             </View>
