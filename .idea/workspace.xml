@@ -4,32 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="cleaned up code">
-      <change afterPath="$PROJECT_DIR$/MachProject/components/NavBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/db/examples.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/tests/Database.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/tests/Navigation.test.js" afterDir="false" />
+    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="Updated pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Developer Notes.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/documentation/Developer Notes.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/Tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/tests/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/assets/adaptive-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/adaptive-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/assets/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/assets/mach-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/mach-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/images/splash.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Leaderboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Leaderboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/navBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/components/settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/header.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

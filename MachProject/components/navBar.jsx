@@ -11,7 +11,7 @@ import Home from '../screens/Home'
 import Leaderboard from '../screens/Leaderboard'
 import Profile from '../screens/Profile'
 import Tasks from '../screens/Tasks'
-import Settings from "../screens/Settings";
+//import Settings from "../screens/Settings";
 import {navigationRef} from "../RootNavigation";
 import StackNavigator from "@react-navigation/stack/src/navigators/createStackNavigator";
 import {Screen} from "react-native-screens";
