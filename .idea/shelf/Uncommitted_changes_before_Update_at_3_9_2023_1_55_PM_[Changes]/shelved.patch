@@ -1,0 +1,555 @@
+Index: MachProject/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MachProject/App.js b/MachProject/App.js
+--- a/MachProject/App.js	
++++ b/MachProject/App.js	
+@@ -7,6 +7,7 @@
+ import {navigationRef} from "./RootNavigation";
+ import Profile from "./components/Profile";
+ import Settings from "./components/settings";
++import PI from "./components/PersonalInformation"
+ 
+ const Stack = createNativeStackNavigator();
+ 
+@@ -27,6 +28,7 @@
+                 />
+                 <Stack.Screen name="Profile" component={Profile} />
+                 <Stack.Screen name="Settings" component={Settings} />
++                <Stack.Screen name="Personal Information" component={PI} />
+             </Stack.Navigator>
+         </NavigationContainer>
+     );
+Index: MachProject/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MachProject/package.json b/MachProject/package.json
+--- a/MachProject/package.json	
++++ b/MachProject/package.json	
+@@ -24,6 +24,7 @@
+     "react-native-reanimated": "~2.12.0",
+     "react-native-safe-area-context": "4.4.1",
+     "react-native-screens": "~3.18.0",
++    "react-native-vector-icons": "^9.2.0",
+     "react-navigation": "^4.4.4"
+   },
+   "devDependencies": {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,13 +4,16 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="cleaned up code">
++    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="Navigation working">
++      <change afterPath="$PROJECT_DIR$/MachProject/components/PersonalInformation.jsx" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/MachProject/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Home.jsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MachProject/components/Leaderboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Leaderboard.jsx" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/MachProject/components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Profile.jsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/MachProject/components/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/navBar.jsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/MachProject/components/settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/settings.jsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MachProject/components/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/Tasks.jsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MachProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package-lock.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MachProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MachProject/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/yarn.lock" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -68,7 +71,10 @@
+       <workItem from="1677863243172" duration="14925000" />
+       <workItem from="1677988409619" duration="2029000" />
+       <workItem from="1678127544756" duration="2006000" />
+-      <workItem from="1678207948035" duration="5851000" />
++      <workItem from="1678207948035" duration="6749000" />
++      <workItem from="1678296419702" duration="107000" />
++      <workItem from="1678297375492" duration="4710000" />
++      <workItem from="1678381153997" duration="1192000" />
+     </task>
+     <task id="LOCAL-00001" summary="added new pages">
+       <created>1678209105435</created>
+@@ -91,7 +97,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1678212692648</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Navigation working">
++      <created>1678215144669</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1678215144669</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -113,6 +126,7 @@
+     <MESSAGE value="added new pages" />
+     <MESSAGE value="fuck everything i just did" />
+     <MESSAGE value="cleaned up code" />
+-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up code" />
++    <MESSAGE value="Navigation working" />
++    <option name="LAST_COMMIT_MESSAGE" value="Navigation working" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: MachProject/package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MachProject/package-lock.json b/MachProject/package-lock.json
+--- a/MachProject/package-lock.json	
++++ b/MachProject/package-lock.json	
+@@ -23,6 +23,7 @@
+         "react-native-reanimated": "~2.12.0",
+         "react-native-safe-area-context": "4.4.1",
+         "react-native-screens": "~3.18.0",
++        "react-native-vector-icons": "^9.2.0",
+         "react-navigation": "^4.4.4"
+       },
+       "devDependencies": {
+@@ -11086,6 +11087,73 @@
+         "react-native": "*"
+       }
+     },
++    "node_modules/react-native-vector-icons": {
++      "version": "9.2.0",
++      "resolved": "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz",
++      "integrity": "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA==",
++      "dependencies": {
++        "prop-types": "^15.7.2",
++        "yargs": "^16.1.1"
++      },
++      "bin": {
++        "fa5-upgrade": "bin/fa5-upgrade.sh",
++        "generate-icon": "bin/generate-icon.js"
++      }
++    },
++    "node_modules/react-native-vector-icons/node_modules/cliui": {
++      "version": "7.0.4",
++      "resolved": "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz",
++      "integrity": "sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==",
++      "dependencies": {
++        "string-width": "^4.2.0",
++        "strip-ansi": "^6.0.0",
++        "wrap-ansi": "^7.0.0"
++      }
++    },
++    "node_modules/react-native-vector-icons/node_modules/strip-ansi": {
++      "version": "6.0.1",
++      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
++      "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
++      "dependencies": {
++        "ansi-regex": "^5.0.1"
++      },
++      "engines": {
++        "node": ">=8"
++      }
++    },
++    "node_modules/react-native-vector-icons/node_modules/y18n": {
++      "version": "5.0.8",
++      "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
++      "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==",
++      "engines": {
++        "node": ">=10"
++      }
++    },
++    "node_modules/react-native-vector-icons/node_modules/yargs": {
++      "version": "16.2.0",
++      "resolved": "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz",
++      "integrity": "sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==",
++      "dependencies": {
++        "cliui": "^7.0.2",
++        "escalade": "^3.1.1",
++        "get-caller-file": "^2.0.5",
++        "require-directory": "^2.1.1",
++        "string-width": "^4.2.0",
++        "y18n": "^5.0.5",
++        "yargs-parser": "^20.2.2"
++      },
++      "engines": {
++        "node": ">=10"
++      }
++    },
++    "node_modules/react-native-vector-icons/node_modules/yargs-parser": {
++      "version": "20.2.9",
++      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz",
++      "integrity": "sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==",
++      "engines": {
++        "node": ">=10"
++      }
++    },
+     "node_modules/react-native/node_modules/@react-native/normalize-color": {
+       "version": "2.0.0",
+       "resolved": "https://registry.npmjs.org/@react-native/normalize-color/-/normalize-color-2.0.0.tgz",
+@@ -21602,6 +21670,59 @@
+         "warn-once": "^0.1.0"
+       }
+     },
++    "react-native-vector-icons": {
++      "version": "9.2.0",
++      "resolved": "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz",
++      "integrity": "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA==",
++      "requires": {
++        "prop-types": "^15.7.2",
++        "yargs": "^16.1.1"
++      },
++      "dependencies": {
++        "cliui": {
++          "version": "7.0.4",
++          "resolved": "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz",
++          "integrity": "sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==",
++          "requires": {
++            "string-width": "^4.2.0",
++            "strip-ansi": "^6.0.0",
++            "wrap-ansi": "^7.0.0"
++          }
++        },
++        "strip-ansi": {
++          "version": "6.0.1",
++          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
++          "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
++          "requires": {
++            "ansi-regex": "^5.0.1"
++          }
++        },
++        "y18n": {
++          "version": "5.0.8",
++          "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
++          "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA=="
++        },
++        "yargs": {
++          "version": "16.2.0",
++          "resolved": "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz",
++          "integrity": "sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==",
++          "requires": {
++            "cliui": "^7.0.2",
++            "escalade": "^3.1.1",
++            "get-caller-file": "^2.0.5",
++            "require-directory": "^2.1.1",
++            "string-width": "^4.2.0",
++            "y18n": "^5.0.5",
++            "yargs-parser": "^20.2.2"
++          }
++        },
++        "yargs-parser": {
++          "version": "20.2.9",
++          "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz",
++          "integrity": "sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w=="
++        }
++      }
++    },
+     "react-navigation": {
+       "version": "4.4.4",
+       "resolved": "https://registry.npmjs.org/react-navigation/-/react-navigation-4.4.4.tgz",
+Index: MachProject/yarn.lock
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MachProject/yarn.lock b/MachProject/yarn.lock
+--- a/MachProject/yarn.lock	
++++ b/MachProject/yarn.lock	
+@@ -2687,6 +2687,15 @@
+     "strip-ansi" "^6.0.0"
+     "wrap-ansi" "^6.2.0"
+ 
++"cliui@^7.0.2":
++  "integrity" "sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ=="
++  "resolved" "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz"
++  "version" "7.0.4"
++  dependencies:
++    "string-width" "^4.2.0"
++    "strip-ansi" "^6.0.0"
++    "wrap-ansi" "^7.0.0"
++
+ "clone-deep@^4.0.1":
+   "integrity" "sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ=="
+   "resolved" "https://registry.npmjs.org/clone-deep/-/clone-deep-4.0.1.tgz"
+@@ -3611,7 +3620,7 @@
+   "resolved" "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz"
+   "version" "1.0.0-beta.2"
+ 
+-"get-caller-file@^2.0.1":
++"get-caller-file@^2.0.1", "get-caller-file@^2.0.5":
+   "integrity" "sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg=="
+   "resolved" "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz"
+   "version" "2.0.5"
+@@ -5775,6 +5784,14 @@
+     "react-freeze" "^1.0.0"
+     "warn-once" "^0.1.0"
+ 
++"react-native-vector-icons@^9.2.0":
++  "integrity" "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA=="
++  "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz"
++  "version" "9.2.0"
++  dependencies:
++    "prop-types" "^15.7.2"
++    "yargs" "^16.1.1"
++
+ "react-native@*", "react-native@>=0.57", "react-native@0.70.5":
+   "integrity" "sha512-5NZM80LC3L+TIgQX/09yiyy48S73wMgpIgN5cCv3XTMR394+KpDI3rBZGH4aIgWWuwijz31YYVF5504+9n2Zfw=="
+   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.70.5.tgz"
+@@ -7120,6 +7137,11 @@
+   "resolved" "https://registry.npmjs.org/y18n/-/y18n-4.0.3.tgz"
+   "version" "4.0.3"
+ 
++"y18n@^5.0.5":
++  "integrity" "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA=="
++  "resolved" "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz"
++  "version" "5.0.8"
++
+ "yallist@^3.0.2":
+   "integrity" "sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g=="
+   "resolved" "https://registry.npmjs.org/yallist/-/yallist-3.1.1.tgz"
+@@ -7143,6 +7165,11 @@
+     "camelcase" "^5.0.0"
+     "decamelize" "^1.2.0"
+ 
++"yargs-parser@^20.2.2":
++  "integrity" "sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w=="
++  "resolved" "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz"
++  "version" "20.2.9"
++
+ "yargs@^15.1.0", "yargs@^15.3.1":
+   "integrity" "sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A=="
+   "resolved" "https://registry.npmjs.org/yargs/-/yargs-15.4.1.tgz"
+@@ -7160,6 +7187,19 @@
+     "y18n" "^4.0.0"
+     "yargs-parser" "^18.1.2"
+ 
++"yargs@^16.1.1":
++  "integrity" "sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw=="
++  "resolved" "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz"
++  "version" "16.2.0"
++  dependencies:
++    "cliui" "^7.0.2"
++    "escalade" "^3.1.1"
++    "get-caller-file" "^2.0.5"
++    "require-directory" "^2.1.1"
++    "string-width" "^4.2.0"
++    "y18n" "^5.0.5"
++    "yargs-parser" "^20.2.2"
++
+ "yocto-queue@^0.1.0":
+   "integrity" "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="
+   "resolved" "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
+Index: MachProject/components/PersonalInformation.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MachProject/components/PersonalInformation.jsx b/MachProject/components/PersonalInformation.jsx
+new file mode 100644
+--- /dev/null	
++++ b/MachProject/components/PersonalInformation.jsx	
+@@ -0,0 +1,90 @@
++import * as React from 'react';
++import {Button, Pressable, StyleSheet, Text, View} from "react-native";
++import { withNavigation } from 'react-navigation';
++import {navigationRef} from "../RootNavigation";
++import Settings from "./settings"
++import Ionicons from 'react-native-vector-icons/Ionicons'
++
++function PersonalInformation( { navigation }) {
++    return (
++        <View style={styles.container}>
++            <View>
++                <Ionicons style={styles.profile} name="person-circle-outline" size="large"></Ionicons>
++            </View>
++            <View>
++                <Text style={styles.profileText}>Brady Ash</Text>
++            </View>
++            <View style={styles.buttonTop}>
++                <Text style={styles.buttonText}>Username: </Text>
++            </View>
++            <View style={styles.button}>
++                <Text style={styles.buttonText}>Birthday: </Text>
++            </View>
++            <View style={styles.button}>
++                <Text style={styles.buttonText}>Mach Team: </Text>
++            </View>
++            <View style={styles.button}>
++                <Text style={styles.buttonText}>Location: </Text>
++            </View>
++        </View>
++
++    );
++};
++const styles = StyleSheet.create({
++        container: {
++            flex: 1,
++            paddingTop: 10,
++            backgroundColor: '#ffffff',
++            alignItems: "center",
++            justifyContent: "flex-start",
++        },
++        massive: {
++            fontSize: 160,
++            color: "#FFE133"
++        },
++        button: {
++            backgroundColor: '#ffffff',
++            padding: 15,
++            width: '100%',
++            borderBottomColor: '#808080',
++            borderBottomWidth: '2px',
++            borderTopColor: '#808080',
++            //borderTopWidth: '2px',
++            alignItems: 'flex-start',
++            justifyContent: 'center',
++            shadowColor: '#808080',
++        },
++        buttonTop: {
++            marginTop: 15,
++            backgroundColor: '#ffffff',
++            padding: 15,
++            width: '100%',
++            borderBottomColor: '#808080',
++            borderBottomWidth: '2px',
++            borderTopColor: '#808080',
++            borderTopWidth: '2px',
++            alignItems: 'flex-start',
++            justifyContent: 'center',
++            shadowColor: '#808080',
++        },
++        press: {
++            backgroundColor: '#ffffff',
++            width: 250,
++            alignItems: 'center',
++            justifyContent: 'center',
++        },
++        buttonText: {
++            fontSize: 18
++        },
++        profile: {
++            fontSize: 150,
++            textAlign: "center"
++        },
++        profileText: {
++            fontSize: 35,
++            textAlign: "center"
++        }
++    }
++);
++
++export default withNavigation(PersonalInformation);
+\ No newline at end of file
+Index: MachProject/components/Tasks.jsx
+===================================================================
+diff --git a/MachProject/components/Tasks.jsx b/MachProject/components/Tasks.jsx
+--- a/MachProject/components/Tasks.jsx	
++++ b/MachProject/components/Tasks.jsx	
+@@ -22,6 +22,7 @@
+ };
+ const styles = StyleSheet.create({
+     container: {
++        paddingTop: 60,
+         flex: 1,
+         backgroundColor: '#000000',
+         alignItems: 'center',
+Index: MachProject/components/Leaderboard.jsx
+===================================================================
+diff --git a/MachProject/components/Leaderboard.jsx b/MachProject/components/Leaderboard.jsx
+--- a/MachProject/components/Leaderboard.jsx	
++++ b/MachProject/components/Leaderboard.jsx	
+@@ -22,6 +22,7 @@
+ };
+ const styles = StyleSheet.create({
+     container: {
++        paddingTop: 60,
+         flex: 1,
+         backgroundColor: '#000000',
+         alignItems: 'center',
+Index: MachProject/components/Profile.jsx
+===================================================================
+diff --git a/MachProject/components/Profile.jsx b/MachProject/components/Profile.jsx
+--- a/MachProject/components/Profile.jsx	
++++ b/MachProject/components/Profile.jsx	
+@@ -3,20 +3,27 @@
+ import { withNavigation } from 'react-navigation';
+ import {navigationRef} from "../RootNavigation";
+ import Settings from "./settings"
++import Ionicons from 'react-native-vector-icons/Ionicons'
+ 
+ function Profile( { navigation }) {
+     return (
+         <View style={styles.container}>
++            <View>
++                <Ionicons style={styles.profile} name="person-circle-outline" size="large"></Ionicons>
++                <Text style={styles.profileText}>Brady Ash</Text>
++            </View>
+             <View style={styles.button}>
+-                <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Settings')}>
+-                    <Text style={styles.buttonText}>Settings</Text>
++                <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Personal Information')}>
++                    <Text style={styles.buttonText}>Personal Information</Text>
+                 </Pressable>
+             </View>
+             <View style={styles.button}>
+-                <Text style={styles.buttonText}>Posts</Text>
++                <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Settings')}>
++                    <Text style={styles.buttonText}>App Settings</Text>
++                </Pressable>
+             </View>
+             <View style={styles.button}>
+-                <Text style={styles.buttonText}>Points</Text>
++                <Text style={styles.buttonText}>Mach Team</Text>
+             </View>
+             <View style={styles.button}>
+                 <Text style={styles.buttonText}>Log Out</Text>
+@@ -28,8 +35,9 @@
+ const styles = StyleSheet.create({
+     container: {
+         flex: 1,
+-        backgroundColor: '#000000',
+-        alignItems: 'center',
++        paddingTop: 60,
++        backgroundColor: '#ffffff',
++        alignItems: "center",
+         justifyContent: "flex-start",
+     },
+     massive: {
+@@ -39,8 +47,8 @@
+     button: {
+         backgroundColor: '#6bd0f6',
+         padding: 15,
+-        width: 250,
+-        marginTop: 30,
++        width: '95%',
++        marginTop: 15,
+         alignItems: 'center',
+         justifyContent: 'center',
+         borderRadius: 15
+@@ -54,7 +62,16 @@
+     },
+     buttonText: {
+         fontSize: 25
+-    }}
++    },
++    profile: {
++        fontSize: 150,
++        textAlign: "center"
++    },
++    profileText: {
++        fontSize: 35,
++        textAlign: "center"
++    }
++    }
+ );
+ 
+ export default withNavigation(Profile);
+\ No newline at end of file
