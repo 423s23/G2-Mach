@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="other pages styled">
+    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/components/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/navBar.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,21 +182,7 @@
       <option name="project" value="LOCAL" />
       <updated>1678399274515</updated>
     </task>
-    <task id="LOCAL-00006" summary="settings page spacing done">
-      <created>1678400393125</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1678400393125</updated>
-    </task>
-    <task id="LOCAL-00007" summary="other pages styled">
-      <created>1678401770350</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1678401770350</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,9 +206,6 @@
     <MESSAGE value="cleaned up code" />
     <MESSAGE value="began re-doing Profile and Settings" />
     <MESSAGE value="diving into settings page" />
-    <MESSAGE value="settings page spacing done" />
-    <MESSAGE value="navBar" />
-    <MESSAGE value="other pages styled" />
-    <option name="LAST_COMMIT_MESSAGE" value="other pages styled" />
+    <option name="LAST_COMMIT_MESSAGE" value="diving into settings page" />
   </component>
 </project>

@@ -1,56 +1,56 @@
-import * as React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from "react-native";
-import { withNavigation } from 'react-navigation';
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import {withNavigation} from "react-navigation";
 
-function Tasks( { navigation }) {
+const Task = ({ route }) => {
+    const { duty } = route.params;
+
     return (
-        <SafeAreaView style={{flex: 1}}>
-            <View style={styles.container}>
-                <View>
-                    <Text style={styles.massive}>Duties</Text>
-                </View>
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Workout: </Text>
-                    <Text style={styles.buttonText}>20 points</Text>
-                </View>
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Post a pic: </Text>
-                    <Text style={styles.buttonText}>50 points</Text>
-                </View>
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Compete in an event: </Text>
-                    <Text style={styles.buttonText}>1000 points</Text>
-                </View>
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>Healthy meal: </Text>
-                    <Text style={styles.buttonText}>10 points</Text>
-                </View>
+        <View style={styles.container}>
+            <View>
+                <Text style={styles.title}>{duty.title}</Text>
             </View>
-        </SafeAreaView>
+            <View>
+                <Text style={styles.points}>{duty.points} Points</Text>
+            </View>
+            <View style={styles.bubble}>
+                <Text style={styles.description}>Description: </Text>
+                <Text>{duty.description}</Text>
+            </View>
+        </View>
     );
 };
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        padding: 30,
+        backgroundColor: '#000000',
         alignItems: 'center',
+        justifyContent: "flex-start",
     },
-    massive: {
-        fontSize: 100,
+    title: {
+        fontSize: 36,
+        color: '#6bd0f6',
+        textAlign: "center",
     },
-    button: {
-        backgroundColor: '#6bd0f6',
+    points: {
+        paddingTop: 10,
+        fontSize: 36,
+        color: '#6bd0f6',
+    },
+    description: {
+        fontSize: 18,
+        color: '#000',
+    },
+    bubble: {
         padding: 15,
-        width: "95%",
-        marginTop: 10,
+        width: 250,
+        marginTop: 30,
         alignItems: 'center',
-        alignContent: "center",
         justifyContent: 'center',
         borderRadius: 15,
-        flexDirection: "row"
-    },
-    buttonText: {
-        fontSize: 15
-    }}
-);
-
-export default withNavigation(Tasks);
+        backgroundColor: '#fff',
+    }
+});
+export default withNavigation(Task);
