@@ -11,7 +11,7 @@ const Leaderboard = () => {
     const printButtonLabel = (item) => {
         //Alert.alert("damn")
         return(
-            <View style={StyleSheet.container}>
+            <View style={styles.container}>
                 <Text>TEST2</Text>
             </View>
         )
@@ -19,7 +19,7 @@ const Leaderboard = () => {
     
 
     return (
-        <SafeAreaView style={{flex: 1}}>
+        <SafeAreaView style={{flex: 1, backgroundColor: '#ffffff'}}>
             <View style={styles.container}>
                 <ButtonGroup
                 buttons={['Local', 'Nation']}
