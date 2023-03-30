@@ -9,6 +9,7 @@ import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
 import TaskList from "./screens/TaskList";
 import Task from "./screens/Tasks";
+import LoginPage from "./screens/Login.jsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ export default function App() {
                 <Stack.Screen name="Settings" component={Settings} />
                 <Stack.Screen name="TaskList" component={TaskList} />
                 <Stack.Screen name="Task" component={Task} />
+                <Stack.Screen name={"Login"} component={LoginPage} />
             </Stack.Navigator>
         </NavigationContainer>
     );

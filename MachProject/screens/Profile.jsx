@@ -23,7 +23,9 @@ function Profile( { navigation }) {
                 <Text style={styles.buttonText}>Points</Text>
             </View>
             <View style={styles.button}>
-                <Text style={styles.buttonText}>Log Out</Text>
+                <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Login')}>
+                    <Text style={styles.buttonText}>Log In/Out</Text>
+                </Pressable>
             </View>
         </View>
 
