@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="commit so i can pull">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Leaderboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Leaderboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/TaskList.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +27,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/abbyquinn/Desktop/Spring23/G2-Mach&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joshfried/Downloads/School/GitHub/G2-Mach&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -51,7 +47,7 @@
       <recent name="C:\Users\brady\WebstormProjects\G2-Mach\MachProject\components" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Database">
+  <component name="RunManager" selected="Jest.&lt;App /&gt;">
     <configuration name="Database" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -119,9 +115,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.&lt;App /&gt;" />
         <item itemvalue="Jest.Database" />
         <item itemvalue="Jest.NavBar" />
-        <item itemvalue="Jest.&lt;App /&gt;" />
         <item itemvalue="Jest.Navbar" />
         <item itemvalue="Jest.Navigation" />
       </list>
@@ -130,7 +126,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f041eea3-a188-4dd0-a68d-1043c5e48522" name="Changes" comment="" />
+      <changelist id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="" />
       <created>1676653195269</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -146,7 +142,10 @@
       <workItem from="1677988409619" duration="2029000" />
       <workItem from="1678127544756" duration="2006000" />
       <workItem from="1678207948035" duration="5851000" />
-      <workItem from="1678467899638" duration="2175000" />
+      <workItem from="1678467104178" duration="1155000" />
+      <workItem from="1679327926926" duration="453000" />
+      <workItem from="1679329337014" duration="1168000" />
+      <workItem from="1679612581982" duration="1611000" />
     </task>
     <task id="LOCAL-00001" summary="added new pages">
       <created>1678209105435</created>

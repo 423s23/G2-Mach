@@ -17,6 +17,7 @@ function LevelBar(props){
         setCurrentPoints(newPoints);
     }
 
+    // Level Bar
     let maxPoints = 100;
     let machID = 'Badass'
     let nextMachID = 'Complete';
