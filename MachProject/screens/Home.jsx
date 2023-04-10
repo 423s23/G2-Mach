@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import {StyleSheet, Text, View, Image, FlatList, Button} from 'react-native';
+import {StyleSheet, Text, View, Image, FlatList, Button, TouchableOpacity} from 'react-native';
 import React, { useState } from 'react';
 import { withNavigation } from 'react-navigation';
 
@@ -207,23 +207,33 @@ function Home( { navigation }) {
                     )}
                 />
             </View>
-            <View style={{ flex: 1, justifyContent: 'flex-start' }}>
-                <View style={styles.button}>
-                    {/*<Button>*/}
-                    {/*    title="Upload Image"*/}
-                    {/*    onPress={()=> navigation.navigate('Home')}*/}
-                    {/*</Button>*/}
-                    <Text> Upload Image </Text>
+            <TouchableOpacity
+                navigation={navigation}
+                onPress={() => navigation.navigate('Awards')}
+            >
+                <View>
+                    <Text style={styles.text}>
+                        Go To Awards!
+                    </Text>
                 </View>
+            </TouchableOpacity>
+            {/*<View style={{ flex: 1, justifyContent: 'flex-start' }}>*/}
+            {/*    <View style={styles.button}>*/}
+            {/*        /!*<Button>*!/*/}
+            {/*        /!*    title="Upload Image"*!/*/}
+            {/*        /!*    onPress={()=> navigation.navigate('Home')}*!/*/}
+            {/*        /!*</Button>*!/*/}
+            {/*        <Text> Upload Image </Text>*/}
+            {/*    </View>*/}
 
-                <View style={styles.button}>
-                    <Text> Duty Request </Text>
-                </View>
+            {/*    <View style={styles.button}>*/}
+            {/*        <Text> Duty Request </Text>*/}
+            {/*    </View>*/}
 
-                <View style={styles.button}>
-                    <Text> Team Leaderboard </Text>
-                </View>
-            </View>
+            {/*    <View style={styles.button}>*/}
+            {/*        <Text> Team Leaderboard </Text>*/}
+            {/*    </View>*/}
+            {/*</View>*/}
 
         </View>
     );
