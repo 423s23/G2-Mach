@@ -1,5 +1,6 @@
 import * as React from "react";
 import NavBar from "./components/NavBar"
+import * as Device from 'expo-device';
 
 import * as SQLite from 'expo-sqlite';
 import {NavigationContainer} from "@react-navigation/native";
@@ -11,7 +12,6 @@ import TaskList from "./screens/TaskList";
 import Task from "./screens/Tasks";
 import LoginPage from "./screens/Login.jsx";
 import Awards from "./screens/Awards.jsx";
-
 
 const Stack = createNativeStackNavigator();
 

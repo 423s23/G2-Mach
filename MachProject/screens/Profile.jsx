@@ -9,7 +9,7 @@ function Profile( { navigation }) {
         <View style={styles.container}>
             <View>
                 <Ionicons style={styles.icon} name="person-circle-outline" />
-                <Text style={styles.iconText}>Brady Ash</Text>
+                {/*<Text style={styles.iconText}>Brady Ash</Text>*/}
             </View>
             <View style={styles.button}>
                 <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Settings')}>
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     container: {
         paddingTop: 60,
         flex: 1,
-        backgroundColor: '#ffffff',
+        backgroundColor: '#000000',
         alignItems: 'center',
         //justifyContent: "flex-start",
     },
@@ -56,17 +56,24 @@ const styles = StyleSheet.create({
         borderRadius: 15
     },
     buttonText: {
-        fontSize: 25
+        fontSize: 25,
     },
     icon: {
         fontSize: 150,
         textAlign: "center",
-        alignContent: "center"
+        alignContent: "center",
+        color: "#ffffff",
+        textShadowColor: "#6bd0f6",
+        //textShadowRadius: 22,
+        shadowOpacity: "100%"
     },
     iconText: {
         fontSize: 50,
         textAlign: "center",
-
+        color: "#000",
+        textShadowColor: "#6bd0f6",
+        textShadowRadius: 5,
+        shadowOpacity: "100%"
     }}
 );
 

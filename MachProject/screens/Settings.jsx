@@ -3,6 +3,16 @@ import {Button, Pressable, StyleSheet, Text, View} from "react-native";
 import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
+const userInfo = {
+    username: "bird",
+    name: "Brady Ash",
+    password: "abc123",
+    email: "bradyash9@gmail.com",
+    city: "Bozeman",
+    state: "Montana",
+    team: "Ultra-Marathon",
+    points: 450,
+}
 
 function Settings( { navigation }) {
     return (
@@ -10,21 +20,21 @@ function Settings( { navigation }) {
             <View>
                 <Ionicons style={styles.icon} name="person-circle-outline" />
             </View>
-            <View style={styles.rowTop}>
+            <View style={styles.button}>
                 <Text style={styles.rowText}>Username: </Text>
-                <Text style={styles.rowTextRight}>BigBird</Text>
+                <Text style={styles.rowTextRight}>{userInfo.username}</Text>
             </View>
-            <View style={styles.row}>
+            <View style={styles.button}>
                 <Text style={styles.rowText}>Location: </Text>
-                <Text style={styles.rowTextRight}>Bozeman, Montana</Text>
+                <Text style={styles.rowTextRight}>{userInfo.city}, {userInfo.state}</Text>
             </View>
-            <View style={styles.row}>
+            <View style={styles.button}>
                 <Text style={styles.rowText}>Email: </Text>
-                <Text style={styles.rowTextRight}>bradyash9@gmail.com</Text>
+                <Text style={styles.rowTextRight}>{userInfo.email}</Text>
             </View>
-            <View style={styles.row}>
+            <View style={styles.button}>
                 <Text style={styles.rowText}>Mach Team: </Text>
-                <Text style={styles.rowTextRight}>Ultra-Marathon</Text>
+                <Text style={styles.rowTextRight}>{userInfo.team}</Text>
             </View>
         </View>
 
@@ -36,7 +46,7 @@ export default withNavigation(Settings);
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffffff',
+        backgroundColor: '#000000',
         alignItems: 'center',
         //justifyContent: "flex-start",
     },
@@ -49,9 +59,10 @@ const styles = StyleSheet.create({
         padding: 15,
         width: "95%",
         marginTop: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 15
+        // alignItems: 'center',
+        // justifyContent: 'center',
+        borderRadius: 15,
+        flexDirection: "row"
     },
     press: {
         backgroundColor: '#6bd0f6',
@@ -66,7 +77,8 @@ const styles = StyleSheet.create({
     icon: {
         fontSize: 150,
         textAlign: "center",
-        alignContent: "center"
+        alignContent: "center",
+        color: "#ffffff"
     },
     iconText: {
         fontSize: 50,
@@ -78,7 +90,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 3,
         width: '100%',
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "flex-start"
     },
     rowTop: {
         borderColor: '#808080',
@@ -91,17 +103,19 @@ const styles = StyleSheet.create({
     },
     rowText: {
         textAlign: "left",
-        fontSize: 25,
+        fontSize: 20,
         paddingLeft: 10,
         marginTop: 10,
         marginBottom: 10,
+        width: "35%"
     },
     rowTextRight: {
-        textAlign: "right",
-        fontSize: 25,
+        textAlign: "left",
+        fontSize: 20,
         paddingRight: 10,
         marginTop: 10,
         marginBottom: 10,
+        width: "65%"
     }}
 
 );

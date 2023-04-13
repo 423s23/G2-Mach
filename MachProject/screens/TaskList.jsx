@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {version} from 'react';
 import {Button, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import { ScrollView } from 'react-native';
 import {withNavigation} from "react-navigation";
 
+
 const TaskList = ({ navigation }) => {
-    const duties = [
+    let duties = [
         { id: 1, title: 'Write a Review', points: 5, description: 'Jersey Review = 5 points'+'\nBib Review = 5 points'+'\nTri-suit Review = 5 points'+'\nTotal Points = 15 points' },
         { id: 2, title: 'Race in Mach Kit', points: 5 },
         { id: 3, title: 'ZSwift Mach Handle', points: 10 },
