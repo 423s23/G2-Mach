@@ -6,10 +6,10 @@ import {withNavigation} from "react-navigation";
 const TaskList = ({ navigation }) => {
     const duties = [
         { id: 1, title: 'Write a Review', points: 5, description: 'Jersey Review = 5 points'+'\nBib Review = 5 points'+'\nTri-suit Review = 5 points'+'\nTotal Points = 15 points' },
-        { id: 2, title: 'Race in Mach Kit', points: 5 },
-        { id: 3, title: 'ZSwift Mach Handle', points: 10 },
-        { id: 4, title: 'Place Handle in Bio', points: 10 },
-        { id: 5, title: 'Send Us A Quality Photo', points: 10 },
+        { id: 2, title: 'Race in Mach Kit', points: 5, description: 'Everytime you race in your kit you receive 5 points.' + '\nLet the Athlete Director know when/where you raced (photos encouraged for more points!).'},
+        { id: 3, title: 'ZSwift Mach Handle', points: 10, description: ''},
+        { id: 4, title: 'Place Handle in Bio', points: 10, description: '@machappareltri' + '\nLet us know if you place our instagram handle in your bio and you’ll receive points.' + '\nFor every new calendar year you’ll receive 10 points.'},
+        { id: 5, title: 'Send Us A Quality Photo', points: 10, description: 'MACH Rights' + '\nCollaborate via instagram or send us your quality training photos'},
         { id: 6, title: 'Task 6', points: 60 },
         { id: 7, title: 'Task 7', points: 70 },
         { id: 8, title: 'Task 8', points: 80 },
