@@ -195,46 +195,29 @@ function Home( { navigation }) {
                 <LevelBar currentPoints={5000}/>
             </View>
             <View>
-                <Text style={[styles.text, {alignItems: 'center', justifyContent: 'center', marginBottom: -5}]}>Recent Uploads</Text>
+                <Text style={[styles.text, {alignItems: 'center', justifyContent: 'center', marginBottom: 5,}]}>Recent Uploads</Text>
             </View>
-            <View style={{ flex: 1, marginBottom: -100 }}>
+            <View style={{ flex: 1}}>
                 <FlatList
                     data={images}
-                    horizontal
+                    //horizontal
+                    vertical
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item }) => (
                         <Image source={item.source} style={styles.image} />
                     )}
                 />
             </View>
-            <TouchableOpacity
-                navigation={navigation}
-                onPress={() => navigation.navigate('Awards')}
-            >
-                <View>
-                    <Text style={styles.text}>
-                        Go To Awards!
-                    </Text>
-                </View>
-            </TouchableOpacity>
-            {/*<View style={{ flex: 1, justifyContent: 'flex-start' }}>*/}
-            {/*    <View style={styles.button}>*/}
-            {/*        /!*<Button>*!/*/}
-            {/*        /!*    title="Upload Image"*!/*/}
-            {/*        /!*    onPress={()=> navigation.navigate('Home')}*!/*/}
-            {/*        /!*</Button>*!/*/}
-            {/*        <Text> Upload Image </Text>*/}
+            {/*<TouchableOpacity*/}
+            {/*    navigation={navigation}*/}
+            {/*    onPress={() => navigation.navigate('Awards')}*/}
+            {/*>*/}
+            {/*    <View>*/}
+            {/*        <Text style={styles.text}>*/}
+            {/*            Go To Awards!*/}
+            {/*        </Text>*/}
             {/*    </View>*/}
-
-            {/*    <View style={styles.button}>*/}
-            {/*        <Text> Duty Request </Text>*/}
-            {/*    </View>*/}
-
-            {/*    <View style={styles.button}>*/}
-            {/*        <Text> Team Leaderboard </Text>*/}
-            {/*    </View>*/}
-            {/*</View>*/}
-
+            {/*</TouchableOpacity>*/}
         </View>
     );
 }
@@ -261,8 +244,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     image: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
         margin: 10,
     },
     levelBarNums: {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     KeyboardAvoidingView,
     Platform,
@@ -14,8 +14,17 @@ import {withNavigation} from "react-navigation";
 const Task = ({navigation, route }) => {
     const { duty } = route.params;
 
+    const [text, setText] = useState('');
+
+    const onChangeText = (newText) => {
+        setText(newText);
+    };
 
     const verify = (duty) => {
+        if (text === '') {
+            return;
+        }
+
         //userPoints += duty.points;
         navigation.navigate('Home');
     }
@@ -34,17 +43,13 @@ const Task = ({navigation, route }) => {
                     <Text style={{marginTop: 20}}>{duty.description}</Text>
                 </View>
                 <View style={[styles.bubble, {flex: 1,}]}>
-                    {/*<KeyboardAvoidingView*/}
-                    {/*    behavior={Platform.OS === 'ios' ? 'padding' : 'height'}*/}
-                    {/*    //style={{ flex: 1 }}*/}
-                    {/*>*/}
-                        <TextInput
-                            placeholder="Submit Task"
-                        >
-                        </TextInput>
-                    {/*</KeyboardAvoidingView>*/}
+                    <TextInput
+                        placeholder="Submit Task"
+                        onChangeText={onChangeText}
+                    >
+                    </TextInput>
                 </View>
-                <TouchableOpacity //Add points
+                <TouchableOpacity
                     onPress={() => verify(duty)}
                     style={styles.button}
                 >
@@ -95,7 +100,6 @@ const styles = StyleSheet.create({
     },
     button: {
         height: 50,
-        //width: 100,
         marginTop: 30,
         marginBottom: 50,
         backgroundColor: '#000',

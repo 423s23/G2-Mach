@@ -183,7 +183,7 @@ const Awards = ({ navigation }) => {
         //awardsDB.insertAward('New', 2);
         awardsDB.readAwards().then(awards => {
             setAwards(awards);
-            console.log(awards);
+            //console.log(awards);
         }).catch(error => {
             console.error(error);
         });

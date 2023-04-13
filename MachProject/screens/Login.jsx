@@ -15,7 +15,7 @@ import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import {StatusBar} from "expo-status-bar";
 
-export default function App() {
+const Login = ({navigation}) =>{
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     return (
@@ -45,6 +45,11 @@ export default function App() {
             <TouchableOpacity style={styles.loginBtn}>
                 <Text style={styles.loginText}>LOGIN</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('SignUp')}
+            >
+                <Text style={styles.forgot_button}>Sign Up</Text>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -70,7 +75,7 @@ const styles = StyleSheet.create({
         height: 50,
         flex: 1,
         padding: 10,
-        marginLeft: 20,
+        //marginLeft: 20,
     },
     forgot_button: {
         height: 30,
@@ -84,6 +89,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: 40,
+        marginBottom: 20,
         backgroundColor: "#6bd0f6",
     },
 });
+export default withNavigation(Login);

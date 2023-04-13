@@ -12,6 +12,8 @@ import TaskList from "./screens/TaskList";
 import Task from "./screens/Tasks";
 import LoginPage from "./screens/Login.jsx";
 import Awards from "./screens/Awards.jsx";
+import Points from "./screens/Points.jsx"
+import SignUp from "./screens/SignUp.jsx"
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +38,9 @@ export default function App() {
                 <Stack.Screen name="Task" component={Task} />
                 <Stack.Screen name={"Login"} component={LoginPage} />
                 <Stack.Screen name="Awards" component={Awards} />
+                <Stack.Screen name="Points" component={Points} />
+                <Stack.Screen name="SignUp" component={SignUp} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );

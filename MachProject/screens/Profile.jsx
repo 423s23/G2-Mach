@@ -17,10 +17,14 @@ function Profile( { navigation }) {
                 </Pressable>
             </View>
             <View style={styles.button}>
-                <Text style={styles.buttonText}>Posts</Text>
+                <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Awards')}>
+                    <Text style={styles.buttonText}>Awards</Text>
+                </Pressable>
             </View>
             <View style={styles.button}>
-                <Text style={styles.buttonText}>Points</Text>
+                <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Points')}>
+                    <Text style={styles.buttonText}>Points</Text>
+                </Pressable>
             </View>
             <View style={styles.button}>
                 <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Login')}>
