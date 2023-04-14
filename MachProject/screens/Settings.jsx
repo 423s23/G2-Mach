@@ -3,16 +3,18 @@ import {Button, Pressable, StyleSheet, Text, View} from "react-native";
 import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
-const userInfo = {
-    username: "bird",
-    name: "Brady Ash",
-    password: "abc123",
-    email: "bradyash9@gmail.com",
-    city: "Bozeman",
-    state: "Montana",
-    team: "Ultra-Marathon",
-    points: 450,
-}
+const userInfo = currentUser
+
+// {
+//     username: "bird",
+//     name: "Brady Ash",
+//     password: "abc123",
+//     email: "bradyash9@gmail.com",
+//     city: "Bozeman",
+//     state: "Montana",
+//     team: "Ultra-Marathon",
+//     points: 450,
+// }
 
 function Settings( { navigation }) {
     return (

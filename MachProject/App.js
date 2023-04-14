@@ -14,16 +14,19 @@ import LoginPage from "./screens/Login.jsx";
 import Awards from "./screens/Awards.jsx";
 import Points from "./screens/Points.jsx"
 import SignUp from "./screens/SignUp.jsx"
+import User from "./components/User.js"
 
+global.temp1 = new User("tim", "teebo", "timmy@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
+global.temp2 = new User("tim2", "teebo2", "timmy2@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
+global.temp3 = new User("tim3", "teebo3", "timmy3@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
+global.allUsers = [temp1, temp2, temp3]
+global.currentUser = null
 const Stack = createNativeStackNavigator();
 
 export default function App() {
     const db = SQLite.openDatabase('Mach.db');
+    //var temp1 = new User("tim", "teebo", "timmy@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
 
-    // return (
-    //
-    //    // <NavBar/>
-    //
     return (
         <NavigationContainer ref={navigationRef}>
             <Stack.Navigator>

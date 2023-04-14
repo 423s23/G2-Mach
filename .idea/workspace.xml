@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Login.jsx created and begun styling">
-      <change afterPath="$PROJECT_DIR$/MachProject/screens/Points.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Awards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Awards.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/screens/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +19,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -32,23 +35,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/joshfried/Downloads/School/GitHub/G2-Mach/MachProject/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/joshfried/Downloads/School/GitHub/G2-Mach/MachProject/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/MachProject/components" />
