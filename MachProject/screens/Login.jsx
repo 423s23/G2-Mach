@@ -21,10 +21,10 @@ const passwordAlert = () =>
         {text: 'OK', onPress: () => console.log('OK Pressed')},
     ]);
 
-// const emailAlert = () =>
-//     Alert.alert('Incorrect Email', 'The Email you entered is incorrect. Please try again', [
-//         {text: 'OK', onPress: () => console.log('OK Pressed')},
-//     ]);
+const emailAlert = () =>
+    Alert.alert('Incorrect Email', 'The Email you entered is incorrect. Please try again', [
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+    ]);
 
 
 
@@ -35,7 +35,8 @@ function Login({ navigation }) {
 
     function validateLogin(email, password) {
         for (const userElement of allUsers) {
-            if (userElement.email.localeCompare(email) === 0) {
+            var emailval = userElement.email.localeCompare(email) === 0
+            if (emailval){
                 if (userElement.password.localeCompare(password) === 0) {
                     currentUser = userElement
                     console.log(currentUser)
@@ -50,6 +51,9 @@ function Login({ navigation }) {
                 //     {text: 'OK', onPress: () => console.log('OK Pressed')}
                 // ]);
             }
+        }
+        if (!emailval) {
+            emailAlert()
         }
 
     }
