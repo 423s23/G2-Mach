@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+    Alert,
     Button,
     Image, KeyboardAvoidingView, Platform,
     Pressable,
@@ -25,18 +26,31 @@ const SignUp = ({navigation}) => {
     const [password, setPassword] = useState("");
 
     const SignIn = () => {
+        let b;
         // global.push
-        const temp = new User(email, firstName, lastName, phoneNumber, username, password)
-        allUsers.push(temp)
-        currentUser = allUsers.pop()
-        allUsers.push(temp)
-        console.log({email});
-        console.log({firstName});
-        console.log({lastName});
-        console.log({phoneNumber});
-        console.log({username});
-        console.log({password});
-        navigation.navigate('Home');
+        for (const userElement of allUsers) {
+            if (userElement.email.localeCompare(email) === 0) {
+                b = false;
+            }
+        }
+        if (b) {
+            const temp = new User(email, firstName, lastName, phoneNumber, username, password)
+            allUsers.push(temp)
+            currentUser = allUsers.pop()
+            allUsers.push(temp)
+            console.log({email});
+            console.log({firstName});
+            console.log({lastName});
+            console.log({phoneNumber});
+            console.log({username});
+            console.log({password});
+            navigation.navigate('Home');
+        }
+        else {
+            Alert.alert('Email in Use', 'The Email you entered is already in the system. Please log in, or try a different email', [
+                {text: 'OK', onPress: () => console.log('OK Pressed')},
+            ]);
+        }
     }
 
     //KeyboardAvoidingView

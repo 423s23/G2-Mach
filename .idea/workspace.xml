@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Login information working, persists while running">
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Login.jsx" afterDir="false" />
+    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Email alerts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681439553313</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Email alerts">
+      <created>1681439738890</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681439738890</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +247,7 @@
     <MESSAGE value="Login.jsx created and begun styling" />
     <MESSAGE value="Login information working" />
     <MESSAGE value="Login information working, persists while running" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login information working, persists while running" />
+    <MESSAGE value="Email alerts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email alerts" />
   </component>
 </project>
