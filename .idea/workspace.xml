@@ -5,21 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Login.jsx created and begun styling">
-      <change afterPath="$PROJECT_DIR$/MachProject/screens/Points.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MachProject/components/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_9_2023_1_55_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_9_2023_1_55_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Awards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Awards.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/screens/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,23 +37,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/joshfried/Downloads/School/GitHub/G2-Mach/MachProject/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/joshfried/Downloads/School/GitHub/G2-Mach/MachProject/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/MachProject/components" />
@@ -163,6 +159,7 @@
       <workItem from="1679612581982" duration="1611000" />
       <workItem from="1680210532716" duration="2965000" />
       <workItem from="1681143302899" duration="14981000" />
+      <workItem from="1681433274467" duration="2787000" />
     </task>
     <task id="LOCAL-00001" summary="added new pages">
       <created>1678209105435</created>

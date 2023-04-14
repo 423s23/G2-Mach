@@ -12,12 +12,44 @@ import {
 } from "react-native";
 import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import {StatusBar} from "expo-status-bar";
 
-const Login = ({navigation}) =>{
+// const passwordAlert = () => {
+//     // Alert.alert('Incorrect Password', 'The password you entered is incorrect. Please try again', [
+//     //     {text: 'OK', onPress: () => console.log('OK Pressed')},
+//     // ]);
+// }
+//
+// const emailAlert = () => {
+//     // Alert.alert('Incorrect Email', 'The Email you entered is incorrect. Please try again', [
+//     //     {text: 'OK', onPress: () => console.log('OK Pressed')},
+//     // ]);
+// }
+//
+//
+// function validateLogin(email, password) {
+//     for (const userElement of allUsers) {
+//         if (userElement.email.localeCompare(email) === 0) {
+//             if (userElement.password.localeCompare(password) === 0) {
+//                 //currentUser = userElement
+//                 // navigationRef.current?.navigate('Home')
+//             }
+//             else {
+//                 passwordAlert()
+//             }
+//         }
+//         else {
+//             emailAlert()
+//         }
+//     }
+//
+// }
+
+
+function Login({ navigation }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require("../images/mach-logo.png")} />
@@ -42,17 +74,17 @@ const Login = ({navigation}) =>{
             <TouchableOpacity>
                 <Text style={styles.forgot_button}>Forgot Password?</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.loginBtn}>
-                <Text style={styles.loginText}>LOGIN</Text>
-            </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => navigation.navigate('SignUp')}
+                style={styles.loginBtn}
+                // onPress={validateLogin(email, password)}
             >
-                <Text style={styles.forgot_button}>Sign Up</Text>
+                <Text>LOGIN</Text>
             </TouchableOpacity>
         </View>
     );
 }
+export default withNavigation(Login);
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -75,7 +107,7 @@ const styles = StyleSheet.create({
         height: 50,
         flex: 1,
         padding: 10,
-        //marginLeft: 20,
+        marginLeft: 20,
     },
     forgot_button: {
         height: 30,
@@ -89,8 +121,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: 40,
-        marginBottom: 20,
         backgroundColor: "#6bd0f6",
     },
 });
-export default withNavigation(Login);
