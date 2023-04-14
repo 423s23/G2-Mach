@@ -14,6 +14,7 @@ import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import {StatusBar} from "expo-status-bar";
+import User from "../components/User.js"
 
 const SignUp = ({navigation}) => {
     const [email, setEmail] = useState("");
@@ -25,6 +26,10 @@ const SignUp = ({navigation}) => {
 
     const SignIn = () => {
         // global.push
+        const temp = new User(email, firstName, lastName, phoneNumber, username, password)
+        allUsers.push(temp)
+        currentUser = allUsers.pop()
+        allUsers.push(temp)
         console.log({email});
         console.log({firstName});
         console.log({lastName});
@@ -39,7 +44,7 @@ const SignUp = ({navigation}) => {
         <View style={styles.container}>
             <Image style={styles.image} source={require("../images/mach-logo.png")} />
             <StatusBar style="auto" />
-            <KeyboardAvoidingView>
+            {/*<KeyboardAvoidingView>*/}
                 <View style={styles.inputView}>
                     <TextInput
                         style={styles.TextInput}
@@ -48,7 +53,7 @@ const SignUp = ({navigation}) => {
                         onChangeText={(email) => setEmail(email)}
                     />
                 </View>
-            </KeyboardAvoidingView>
+            {/*</KeyboardAvoidingView>*/}
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}

@@ -84,6 +84,11 @@ function Login({ navigation }) {
             >
                 <Text>LOGIN</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('SignUp')}
+            >
+                <Text style={styles.forgot_button}>Sign Up</Text>
+            </TouchableOpacity>
         </View>
     );
 }

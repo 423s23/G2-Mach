@@ -3,7 +3,6 @@ import {Button, Pressable, StyleSheet, Text, View} from "react-native";
 import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
-const userInfo = currentUser
 
 // {
 //     username: "bird",
@@ -17,6 +16,7 @@ const userInfo = currentUser
 // }
 
 function Settings( { navigation }) {
+    const userInfo = currentUser;
     return (
         <View style={styles.container}>
             <View>
@@ -27,16 +27,16 @@ function Settings( { navigation }) {
                 <Text style={styles.rowTextRight}>{userInfo.username}</Text>
             </View>
             <View style={styles.button}>
-                <Text style={styles.rowText}>Location: </Text>
-                <Text style={styles.rowTextRight}>{userInfo.city}, {userInfo.state}</Text>
+                <Text style={styles.rowText}>Phone: </Text>
+                <Text style={styles.rowTextRight}>{userInfo.phone}</Text>
             </View>
             <View style={styles.button}>
                 <Text style={styles.rowText}>Email: </Text>
                 <Text style={styles.rowTextRight}>{userInfo.email}</Text>
             </View>
             <View style={styles.button}>
-                <Text style={styles.rowText}>Mach Team: </Text>
-                <Text style={styles.rowTextRight}>{userInfo.team}</Text>
+                <Text style={styles.rowText}>Name: </Text>
+                <Text style={styles.rowTextRight}>{userInfo.first} {userInfo.last}</Text>
             </View>
         </View>
 

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Login.jsx created and begun styling">
+    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Login information working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/screens/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Settings.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +196,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680212879786</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Login information working">
+      <created>1681438120114</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681438120115</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Login information working">
+      <created>1681438132625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681438132625</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +235,7 @@
     <MESSAGE value="began re-doing Profile and Settings" />
     <MESSAGE value="diving into settings page" />
     <MESSAGE value="Login.jsx created and begun styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login.jsx created and begun styling" />
+    <MESSAGE value="Login information working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login information working" />
   </component>
 </project>

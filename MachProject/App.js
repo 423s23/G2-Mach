@@ -16,11 +16,11 @@ import Points from "./screens/Points.jsx"
 import SignUp from "./screens/SignUp.jsx"
 import User from "./components/User.js"
 
-global.temp1 = new User("tim", "teebo", "timmy@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
-global.temp2 = new User("tim2", "teebo2", "timmy2@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
-global.temp3 = new User("tim3", "teebo3", "timmy3@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
+global.temp1 = new User ("tim1@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy1", "tim123")
+global.temp2 = new User ("tim2@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy2", "tim123")
+global.temp3 = new User ("tim3@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy3", "tim123")
 global.allUsers = [temp1, temp2, temp3]
-global.currentUser = null
+global.currentUser = new User("", "", "", "", "", "")
 const Stack = createNativeStackNavigator();
 
 export default function App() {

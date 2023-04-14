@@ -1,28 +1,11 @@
 export default class User {
-    constructor(name, username, email, password, city, state, phone, team) {
-        this.name = name;
-        this.username = username;
+    constructor(email, firstname, lastname, phone, username, password) {
         this.email = email;
-        this.password = password;
-        this.city = city;
-        this.state = state;
+        this.first = firstname;
+        this.last = lastname;
         this.phone = phone;
-        this.team = team;
+        this.username = username;
+        this.password = password;
+        this.points = 0
     }
-
-    // get username() {
-    //     return this.username
-    // }
-    // get email() {
-    //     return this.email
-    // }
-    // set email(e) {
-    //     this.email = e
-    // }
-    // get password() {
-    //     return this.password
-    // }
-    // set password(p) {
-    //     this.password = p
-    // }
 }
