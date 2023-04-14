@@ -25,7 +25,6 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
     const db = SQLite.openDatabase('Mach.db');
-    //var temp1 = new User("tim", "teebo", "timmy@gmail.com", "timdabest1", "Bozeman", "Montana", "414-414-4141", "Bad")
 
     return (
         <NavigationContainer ref={navigationRef}>
@@ -39,7 +38,7 @@ export default function App() {
                 <Stack.Screen name="Settings" component={Settings} />
                 <Stack.Screen name="TaskList" component={TaskList} />
                 <Stack.Screen name="Task" component={Task} />
-                <Stack.Screen name={"Login"} component={LoginPage} />
+                <Stack.Screen name="Login" component={LoginPage} />
                 <Stack.Screen name="Awards" component={Awards} />
                 <Stack.Screen name="Points" component={Points} />
                 <Stack.Screen name="SignUp" component={SignUp} />

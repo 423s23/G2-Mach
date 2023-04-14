@@ -11,6 +11,7 @@ const images = [
 
 function LevelBar(props){
     const [currentPoints, setCurrentPoints] = useState(props.currentPoints);
+    console.log("Level bar points: " + currentPoints)
 
     const increasePoints = () =>{
         const newPoints = 1000;
@@ -187,12 +188,13 @@ function LevelBar(props){
     );
 }
 function Home( { navigation }) {
+    const refresh = () => window.location.reload(true)
 
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
             <View>
-                <LevelBar currentPoints={5000}/>
+                <LevelBar currentPoints={currentUser.points}/>
             </View>
             <View>
                 <Text style={[styles.text, {alignItems: 'center', justifyContent: 'center', marginBottom: 5,}]}>Recent Uploads</Text>

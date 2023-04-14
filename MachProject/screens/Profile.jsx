@@ -13,7 +13,7 @@ function Profile( { navigation }) {
             </View>
             <View style={styles.button}>
                 <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Settings')}>
-                    <Text style={styles.buttonText}>Settings</Text>
+                    <Text style={styles.buttonText}>User Information</Text>
                 </Pressable>
             </View>
             <View style={styles.button}>

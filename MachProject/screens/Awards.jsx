@@ -174,12 +174,12 @@ const Awards = ({ navigation }) => {
     useEffect(() => {
         const awardsDB = new AwardDatabase();
         //awardsDB.findPath();
-        // awardsDB.createTable().then(success => {
-        //     console.log(success)
-        //     if (success) {
-        //         awardsDB.insertMultiple(awardsList)
-        //     }
-        // });
+        awardsDB.createTable().then(success => {
+            console.log(success)
+            if (success) {
+                awardsDB.insertMultiple(awardsList)
+            }
+        });
         //awardsDB.insertAward('New', 2);
         awardsDB.readAwards().then(awards => {
             setAwards(awards);

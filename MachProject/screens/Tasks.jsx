@@ -25,7 +25,8 @@ const Task = ({navigation, route }) => {
             return;
         }
 
-        //userPoints += duty.points;
+        currentUser.points += duty.points;
+        console.log(currentUser.points)
         navigation.navigate('Home');
     }
 
