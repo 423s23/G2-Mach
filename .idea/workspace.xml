@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Email alerts">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Check if email is in the system pre signup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681439738890</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Check if email is in the system pre signup">
+      <created>1681440050955</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681440050955</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +252,7 @@
     <MESSAGE value="Login information working" />
     <MESSAGE value="Login information working, persists while running" />
     <MESSAGE value="Email alerts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Email alerts" />
+    <MESSAGE value="Check if email is in the system pre signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check if email is in the system pre signup" />
   </component>
 </project>
