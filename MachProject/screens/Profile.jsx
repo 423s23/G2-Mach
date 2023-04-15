@@ -4,12 +4,14 @@ import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
+// Displays 4 buttons (User Information, Awards, Points, Log In/Out)
+// and takes the user to those pages respectively.
+
 function Profile( { navigation }) {
     return (
         <View style={styles.container}>
             <View>
                 <Ionicons style={styles.icon} name="person-circle-outline" />
-                {/*<Text style={styles.iconText}>Brady Ash</Text>*/}
             </View>
             <View style={styles.button}>
                 <Pressable style={styles.press} onPress={() => navigationRef.current?.navigate('Settings')}>

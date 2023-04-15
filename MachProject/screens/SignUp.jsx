@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import {
     Alert,
     Button,
-    Image, KeyboardAvoidingView, Platform,
+    Image, Keyboard, KeyboardAvoidingView, Platform,
     Pressable,
     SafeAreaView,
     StyleSheet,
     Text,
     TextInput,
-    TouchableOpacity,
+    TouchableOpacity, TouchableWithoutFeedback,
     View
 } from "react-native";
 import { withNavigation } from 'react-navigation';
@@ -16,6 +16,9 @@ import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import {StatusBar} from "expo-status-bar";
 import User from "../components/User.js"
+
+// Displays a Sign-Up page with prompts for email, first name, last name, phone number, username, password
+// and a Sign-up button.
 
 const SignUp = ({navigation}) => {
     const [email, setEmail] = useState("");
@@ -25,9 +28,8 @@ const SignUp = ({navigation}) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const SignIn = () => {
+    const SignIn = () => { //verifies and signs in the new user
         let b;
-        // global.push
         for (const userElement of allUsers) {
             if (userElement.email.localeCompare(email) === 0) {
                 b = false;
@@ -53,7 +55,6 @@ const SignUp = ({navigation}) => {
         }
     }
 
-    //KeyboardAvoidingView
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require("../images/mach-logo.png")} />
@@ -104,13 +105,15 @@ const SignUp = ({navigation}) => {
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={styles.inputView}
             >
-                <TextInput
-                    style={styles.TextInput}
-                    placeholder="Password"
-                    placeholderTextColor="#003f5c"
-                    secureTextEntry={true}
-                    onChangeText={(password) => setPassword(password)}
-                />
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                    <TextInput
+                        style={styles.TextInput}
+                        placeholder="Password"
+                        placeholderTextColor="#003f5c"
+                        secureTextEntry={true}
+                        onChangeText={(password) => setPassword(password)}
+                    />
+                </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
             <TouchableOpacity
                 style={styles.loginBtn}
@@ -143,7 +146,6 @@ const styles = StyleSheet.create({
         height: 50,
         flex: 1,
         padding: 10,
-        //marginLeft: 20,
     },
     forgot_button: {
         height: 30,

@@ -1,8 +1,5 @@
 import * as React from "react";
 import NavBar from "./components/NavBar"
-import * as Device from 'expo-device';
-
-import * as SQLite from 'expo-sqlite';
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {navigationRef} from "./RootNavigation";
@@ -16,6 +13,10 @@ import Points from "./screens/Points.jsx"
 import SignUp from "./screens/SignUp.jsx"
 import User from "./components/User.js"
 
+
+// Navigation for the App
+
+// Arrays of the users
 global.temp1 = new User ("tim1@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy1", "tim123")
 global.temp2 = new User ("tim2@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy2", "tim123")
 global.temp3 = new User ("tim3@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy3", "tim123")
@@ -24,7 +25,6 @@ global.currentUser = new User("", "", "", "", "", "")
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-    const db = SQLite.openDatabase('Mach.db');
 
     return (
         <NavigationContainer ref={navigationRef}>

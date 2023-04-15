@@ -4,6 +4,10 @@ import { withNavigation } from 'react-navigation';
 import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
+// Displays the user's username,
+
+
+
 // {
 //     username: "bird",
 //     name: "Brady Ash",
