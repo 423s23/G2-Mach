@@ -3,6 +3,8 @@ import {Button, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-nat
 import { ScrollView } from 'react-native';
 import {withNavigation} from "react-navigation";
 
+// Displays the tasks as buttons in a list with name and points.
+// When the button is clicked it takes the user to Tasks screen (Tasks.jsx)
 
 const TaskList = ({ navigation }) => {
     let duties = [
@@ -11,14 +13,9 @@ const TaskList = ({ navigation }) => {
         { id: 3, title: 'ZSwift Mach Handle', points: 10, description: ''},
         { id: 4, title: 'Place Handle in Bio', points: 10, description: '@machappareltri' + '\nLet us know if you place our instagram handle in your bio and you’ll receive points.' + '\nFor every new calendar year you’ll receive 10 points.'},
         { id: 5, title: 'Send Us A Quality Photo', points: 10, description: 'MACH Rights' + '\nCollaborate via instagram or send us your quality training photos'},
-        { id: 6, title: 'Task 6', points: 60 },
-        { id: 7, title: 'Task 7', points: 70 },
-        { id: 8, title: 'Task 8', points: 80 },
-        { id: 9, title: 'Task 9', points: 90 },
-        { id: 10, title: 'Task 10', points: 100 },
     ];
 
-    const handlePress = (duty) => {
+    const handlePress = (duty) => { // Goes to Task page (Tasks.jsx)
         navigation.navigate('Task', { duty });
     };
 
@@ -26,7 +23,6 @@ const TaskList = ({ navigation }) => {
         <View style={styles.container}>
             <ScrollView style={{marginTop: 10}}>
                 {duties.map(duty => (
-                    //<DutyButton key={duty.id} duty={duty} navigation={navigation} />
                     <TouchableOpacity
                         key={duty.id}
                         style={styles.button}

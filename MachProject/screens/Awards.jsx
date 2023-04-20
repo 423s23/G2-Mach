@@ -2,135 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text, View, Image, FlatList, Button, ScrollView, TouchableOpacity} from 'react-native';
 import React, { useState, useEffect } from 'react';
 import { withNavigation } from 'react-navigation';
-import * as SQLite from 'expo-sqlite';
-import * as FileSystem from 'expo-file-system';
-import Database from '../components/Database.js'
 
-const db = Database.getDatabase();
-
-    class AwardDatabase {
-    findPath() {
-        db.transaction(tx => {
-            tx.executeSql(
-                `SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;`,
-                [],
-                (_, result) => {
-                    if (result.rows.length > 0) {
-                        const path = db._db.filename;
-                        console.log(path);
-                    } else {
-                        console.log('No tables found');
-                    }
-                },
-                error => {
-                    console.log(`Error getting database path: ${error.message}`);
-                }
-            );
-        });
-
-    }
-    createTable() {
-        return new Promise((resolve, reject) => {
-            db.transaction(tx => {
-                tx.executeSql(
-                    'SELECT name FROM sqlite_master WHERE type="table" AND name="awards";',
-                    [],
-                    (_, result) => {
-                        if (result.rows.length > 0) {
-                            resolve(false); // Table already exists
-                        } else {
-                            tx.executeSql(
-                                'CREATE TABLE awards (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, points INT);',
-                                [],
-                                () => {
-                                    resolve(true); // Table created successfully
-                                },
-                                (_, error) => {
-                                    console.log('Error creating table:', error);
-                                    resolve(false); // Error creating table
-                                }
-                            );
-                        }
-                    },
-                    (_, error) => {
-                        console.log('Error checking for table:', error);
-                        resolve(false); // Error checking for table
-                    }
-                );
-            });
-        });
-    }
-
-    insertAward(name, points) {
-        db.transaction(tx => {
-            tx.executeSql(
-                'INSERT INTO awards (name, points) VALUES (?, ?);',
-                [name, points],
-                (_, { insertId }) => console.log(`Inserted row with id ${insertId}`),
-                (_, error) => console.log(`Error inserting row: ${error}`)
-            );
-        });
-    }
-
-    insertMultiple(awards) {
-        const values = awards.map(({ name, points }) => `("${name}", ${points})`).join(',');
-        db.transaction(tx => {
-            tx.executeSql(
-                `INSERT INTO awards (name, points) VALUES ${values};`,
-                [],
-                () => console.log(`Inserted ${awards.length} rows`),
-                (_, error) => console.log(`Error inserting rows: ${error}`)
-            );
-        });
-    }
-
-    readAwards() {
-        return new Promise((resolve, reject) => {
-            db.transaction(tx => {
-                tx.executeSql(
-                    'SELECT * FROM awards',
-                    [],
-                    (txObj, { rows: { _array } }) => {
-                        // Map each row to an object containing id, name, and points
-                        const awards = _array.map(row => ({
-                            id: row.id,
-                            name: row.name,
-                            points: row.points,
-                        }));
-                        resolve(awards);
-                    },
-                    error => reject(error)
-                );
-            });
-        });
-    }
-
-
-    updatePoints(id, points) {
-        db.transaction(tx => {
-            tx.executeSql(
-                'UPDATE awards SET points = ? WHERE id = ?;',
-                [points, id],
-                () => console.log('Updated row'),
-                (_, error) => console.log(`Error updating row: ${error}`)
-            );
-        });
-    }
-
-    deleteAward(id) {
-        db.transaction(tx => {
-            tx.executeSql(
-                'DELETE FROM awards WHERE id = ?;',
-                [id],
-                () => console.log('Deleted row'),
-                (_, error) => console.log(`Error deleting row: ${error}`)
-            );
-        });
-    }
-}
+// Displays each award's name and points required for it
 
 const Awards = ({ navigation }) => {
-    const awardsList = [ //Basically the Database because it won't work
+    const awardsList = [ // List of the awards
         { name: 'Mach Water Bottle + Stickers + Tattoos', points: 0 },
         { name: 'Mach Drawstring Backpack', points: 300 },
         { name: 'Mach Socks', points: 500 },
@@ -169,38 +45,15 @@ const Awards = ({ navigation }) => {
         { name: 'Free Team Bundle For Life', points: 50000 },
     ];
 
-    const [awards, setAwards] = useState([]);
-
-    useEffect(() => {
-        const awardsDB = new AwardDatabase();
-        //awardsDB.findPath();
-        awardsDB.createTable().then(success => {
-            console.log(success)
-            if (success) {
-                awardsDB.insertMultiple(awardsList)
-            }
-        });
-        //awardsDB.insertAward('New', 2);
-        awardsDB.readAwards().then(awards => {
-            setAwards(awards);
-            //console.log(awards);
-        }).catch(error => {
-            console.error(error);
-        });
-        //awardsDB.updatePoints(1, 150);
-        //awardsDB.deleteAward(10);
-
-    }, []);
-
     return (
         <View style={styles.container}>
             <ScrollView style={{marginTop: 10}}>
-                {awards.map(award => (
+                {awardsList.map(award => (
                     <View
-                        key={award.id}
+                        key={award.points}
                         style={[
                             styles.button,
-                            { backgroundColor: award.points > 250 ? '#6bd0f6' : '#AAAAAA' },
+                            { backgroundColor: award.points > currentUser.points ? '#6bd0f6' : '#AAAAAA' },
                         ]}
                     >
                         <View style={styles.buttonContent}>

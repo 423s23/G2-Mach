@@ -3,6 +3,9 @@ import {StyleSheet, Text, View, Image, FlatList, Button, TouchableOpacity} from 
 import React, { useState } from 'react';
 import { withNavigation } from 'react-navigation';
 
+// Displays the level and star bars based on the users points
+// and a column of pictures.
+
 const images = [
     { source: require('../images/homepic1.jpeg') },
     { source: require('../images/homepic2.jpeg') },
@@ -12,11 +15,6 @@ const images = [
 function LevelBar(props){
     const [currentPoints, setCurrentPoints] = useState(props.currentPoints);
     console.log("Level bar points: " + currentPoints)
-
-    const increasePoints = () =>{
-        const newPoints = 1000;
-        setCurrentPoints(newPoints);
-    }
 
     // Level Bar
     let maxPoints = 100;
@@ -55,7 +53,7 @@ function LevelBar(props){
     const filledStar = require('../images/star_filled.png');
     const stars = [];
 
-    if (machID == 'Legend'){
+    if (machID == 'Legend'){ //MACH LEGEND
         for (let i = 0; i < 5; i++) {
             stars.push(
                 <Image
@@ -65,7 +63,7 @@ function LevelBar(props){
                 />
             );
         }
-    } else if (machID == 'Hero'){
+    } else if (machID == 'Hero'){ //MACH HERO
         for (let i = 0; i < 4; i++) {
             stars.push(
                 <Image
@@ -82,7 +80,7 @@ function LevelBar(props){
                 style={{ width: 50, height: 50 }}
             />
         );
-    } else if (machID == 'Icon') {
+    } else if (machID == 'Icon') { //MACH ICON
         for (let i = 0; i < 3; i++) {
             stars.push(
                 <Image
@@ -101,7 +99,7 @@ function LevelBar(props){
                 />
             );
         }
-    } else if (machID == 'Star') {
+    } else if (machID == 'Star') { //MACH STAR
         for (let i = 0; i < 2; i++) {
             stars.push(
                 <Image
@@ -120,7 +118,7 @@ function LevelBar(props){
                 />
             );
         }
-    } else{
+    } else{ //MACH BADASS
         stars.push(
             <Image
                 key={0}
@@ -210,16 +208,6 @@ function Home( { navigation }) {
                     )}
                 />
             </View>
-            {/*<TouchableOpacity*/}
-            {/*    navigation={navigation}*/}
-            {/*    onPress={() => navigation.navigate('Awards')}*/}
-            {/*>*/}
-            {/*    <View>*/}
-            {/*        <Text style={styles.text}>*/}
-            {/*            Go To Awards!*/}
-            {/*        </Text>*/}
-            {/*    </View>*/}
-            {/*</TouchableOpacity>*/}
         </View>
     );
 }
@@ -232,10 +220,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#000000',
         alignItems: 'center',
         justifyContent: "flex-start",
-    },
-    massive: {
-        fontSize: 160,
-        color: "#FFE133",
     },
     button: {
         backgroundColor: '#FFF',

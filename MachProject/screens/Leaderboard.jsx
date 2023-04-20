@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import {withNavigation} from "react-navigation";
 
+// Displays a local and global leaderboard based on points
+
 const namesLocal = ['Dan          120', 'Bob          100', 'Tim          66'];
 const namesGlobal = ['Jack               10001', 'Bob               90465', 'Josh               3000', 'Brady               1276', 'Abby               1001'];
 
 
 const Leaderboard = () => {
-    const [button1Clicked, setButton1Clicked] = useState(false);
+    const [button1Clicked, setButton1Clicked] = useState(true);
     const [button2Clicked, setButton2Clicked] = useState(false);
 
 
-    const [showNames, setShowNames] = useState(false);
+    const [showNames, setShowNames] = useState(true);
   
     const handleButton1Click = () => {
       setButton1Clicked(true);

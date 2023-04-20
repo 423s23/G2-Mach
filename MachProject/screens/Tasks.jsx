@@ -11,16 +11,20 @@ import {
 } from 'react-native';
 import {withNavigation} from "react-navigation";
 
+// Displays an individual task with the name, points, and description
+// Have a place to submit information for the task and
+// a submit button to give the user points
+
 const Task = ({navigation, route }) => {
     const { duty } = route.params;
 
     const [text, setText] = useState('');
 
-    const onChangeText = (newText) => {
+    const onChangeText = (newText) => { // updates the text when the user presses enter
         setText(newText);
     };
 
-    const verify = (duty) => {
+    const verify = (duty) => { // verify that the user submits some information, adds points, and goes home
         if (text === '') {
             return;
         }

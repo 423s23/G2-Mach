@@ -11,9 +11,11 @@ import {
 } from 'react-native';
 import {withNavigation} from "react-navigation";
 
+// Displays each MACH level and the required points
+
 const Points = ({navigation}) => {
 
-    let points = [
+    let points = [ // List of each MACH level and required points
         {id: 1, title: "MACH BADASS", points: 0},
         {id: 2, title: "MACH STAR", points: 1500},
         {id: 3,title: "MACH ICON", points: 4000},
