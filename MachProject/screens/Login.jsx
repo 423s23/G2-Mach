@@ -16,6 +16,8 @@ import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import {StatusBar} from "expo-status-bar";
 
+
+// Alerts
 const passwordAlert = () =>
     Alert.alert('Incorrect Password', 'The password you entered is incorrect. Please try again', [
         {text: 'OK', onPress: () => console.log('OK Pressed')},
@@ -27,12 +29,13 @@ const emailAlert = () =>
     ]);
 
 
-
+// Returns the code to render the login page, navigates back home on success
 function Login({ navigation }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const onPress = () => validateLogin(email, password);
 
+    // This function iterates through and validates that there is a user with the inputted email and password; if not, it gives the user an erro
     function validateLogin(email, password) {
         for (const userElement of allUsers) {
             var emailval = userElement.email.localeCompare(email) === 0
