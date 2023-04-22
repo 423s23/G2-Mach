@@ -20,12 +20,17 @@ import {StatusBar} from "expo-status-bar";
 // Alerts
 const passwordAlert = () =>
     Alert.alert('Incorrect Password', 'The password you entered is incorrect. Please try again', [
-        {text: 'OK', onPress: () => console.log('OK Pressed')},
+        {text: 'OK', onPress: () => console.log('pasword OK Pressed')},
     ]);
 
 const emailAlert = () =>
     Alert.alert('Incorrect Email', 'The Email you entered is incorrect. Please try again', [
-        {text: 'OK', onPress: () => console.log('OK Pressed')},
+        {text: 'OK', onPress: () => console.log('Email OK Pressed')},
+    ]);
+
+const invalidEmailAlert = () =>
+    Alert.alert('Invalid Email', 'The Email you entered is invalid. Please try again', [
+        {text: 'OK', onPress: () => console.log('Invalid OK Pressed')},
     ]);
 
 
@@ -37,25 +42,30 @@ function Login({ navigation }) {
 
     // This function iterates through and validates that there is a user with the inputted email and password; if not, it gives the user an erro
     function validateLogin(email, password) {
+        // if( /(.+)@(.+){2,}\.(.+){2,}/.test(email) ){
+        //     console.log('Valid Email')
+        // } else {
+        //     console.log('Invalid Email')
+        //     invalidEmailAlert()
+        // }
+        let b = false
         for (const userElement of allUsers) {
-            var emailval = userElement.email.localeCompare(email) === 0
-            if (emailval){
-                if (userElement.password.localeCompare(password) === 0) {
+            const emailval = userElement.email.localeCompare(email) === 0;
+            const passwordval = userElement.password.localeCompare(password) === 0;
+            if (emailval) {
+                b = true
+                if (emailval && passwordval){
                     currentUser = userElement
                     console.log(currentUser)
                     navigationRef.current?.navigate('Home')
                 }
-                else {
+                else if (emailval && !passwordval){
+                    console.log('Incorrect password')
                     passwordAlert()
                 }
             }
-            else {
-                // Alert.alert('Incorrect Email', 'The Email you entered is incorrect. Please try again', [
-                //     {text: 'OK', onPress: () => console.log('OK Pressed')}
-                // ]);
-            }
         }
-        if (!emailval) {
+        if (!b) {
             emailAlert()
         }
 

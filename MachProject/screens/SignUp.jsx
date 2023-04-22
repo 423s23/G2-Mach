@@ -20,6 +20,11 @@ import User from "../components/User.js"
 // Displays a Sign-Up page with prompts for email, first name, last name, phone number, username, password
 // and a Sign-up button.
 
+const invalidEmailAlert = () =>
+    Alert.alert('Invalid Email', 'The Email you entered is invalid. Please try again', [
+        {text: 'OK', onPress: () => console.log('Invalid OK Pressed')},
+    ]);
+
 const SignUp = ({navigation}) => {
     const [email, setEmail] = useState("");
     const [firstName, setFirstName] = useState("");
@@ -28,8 +33,15 @@ const SignUp = ({navigation}) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const SignIn = () => { //verifies and signs in the new user
-        let b;
+    const SignIn = () => { //verifies and signs in the new user, and navigates to the home page
+        if( /(.+)@(.+){2,}\.(.+){2,}/.test(email) ){
+            console.log('Valid Email')
+        } else {
+            console.log('Invalid Email')
+            invalidEmailAlert()
+            return
+        }
+        let b = true;
         for (const userElement of allUsers) {
             if (userElement.email.localeCompare(email) === 0) {
                 b = false;
@@ -52,10 +64,11 @@ const SignUp = ({navigation}) => {
             Alert.alert('Email in Use', 'The Email you entered is already in the system. Please log in, or try a different email', [
                 {text: 'OK', onPress: () => console.log('OK Pressed')},
             ]);
+            console.log(allUsers)
         }
     }
 
-    return (
+    return ( //returns the page that the user sees
         <View style={styles.container}>
             <Image style={styles.image} source={require("../images/mach-logo.png")} />
             <StatusBar style="auto" />

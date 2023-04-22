@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="More things">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="commit to pull">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachProject/screens/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/SignUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -152,6 +155,7 @@
       <workItem from="1680210532716" duration="2965000" />
       <workItem from="1681143302899" duration="14981000" />
       <workItem from="1681846358866" duration="12000" />
+      <workItem from="1682011454704" duration="3061000" />
     </task>
     <task id="LOCAL-00001" summary="added new pages">
       <created>1678209105435</created>
@@ -244,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681491801847</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="commit to pull">
+      <created>1682011486744</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682011486744</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +285,7 @@
     <MESSAGE value="Email alerts" />
     <MESSAGE value="Check if email is in the system pre signup" />
     <MESSAGE value="More things" />
-    <option name="LAST_COMMIT_MESSAGE" value="More things" />
+    <MESSAGE value="commit to pull" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit to pull" />
   </component>
 </project>
