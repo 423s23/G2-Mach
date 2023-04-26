@@ -13,7 +13,6 @@ import Points from "./screens/Points.jsx"
 import SignUp from "./screens/SignUp.jsx"
 import User from "./components/User.js"
 
-
 // Navigation for the App
 
 // Arrays of the users

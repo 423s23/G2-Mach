@@ -1,7 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import {StyleSheet, Text, View, Image, FlatList, Button, TouchableOpacity} from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View,
+    Image,
+    FlatList,
+    Button,
+    TouchableOpacity,
+    RefreshControl,
+    ScrollView
+} from 'react-native';
 import React, { useState } from 'react';
 import { withNavigation } from 'react-navigation';
+import reloadInstructions from "react-native/Libraries/NewAppScreen/components/ReloadInstructions.js";
 
 // Displays the level and star bars based on the users points
 // and a column of pictures.
@@ -185,11 +196,32 @@ function LevelBar(props){
         </View>
     );
 }
-function Home( { navigation }) {
-    const refresh = () => window.location.reload(true)
+//need this so we can refresh
+function Container( {navigation}) {
+    const [key, setKey] = React.useState(0);
+    const reload = React.useCallback(() => setKey((prevKey) => prevKey + 1), []);
+    return <Home reload={reload} key={key} />;
+}
+
+//returns the home page data
+const Home = ( {reload}) => {
+    const [refreshing, setRefreshing] = React.useState(false);
+
+    const onRefresh = React.useCallback(() => {
+        setRefreshing(true);
+        reload;
+        setTimeout(() => {
+            setRefreshing(false);
+        }, 2000);
+    }, []);
+
 
     return (
         <View style={styles.container}>
+            <ScrollView
+                refreshControl={
+                    <RefreshControl refreshing={refreshing} onRefresh={reload} />
+                }>
             <StatusBar style="auto" />
             <View>
                 <LevelBar currentPoints={currentUser.points}/>
@@ -208,11 +240,12 @@ function Home( { navigation }) {
                     )}
                 />
             </View>
+            </ScrollView>
         </View>
     );
 }
 
-export default withNavigation(Home);
+export default withNavigation(Container);
 
 const styles = StyleSheet.create({
     container: {

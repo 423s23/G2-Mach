@@ -10,6 +10,7 @@ import {
     View
 } from 'react-native';
 import {withNavigation} from "react-navigation";
+let increment = 1
 
 // Displays an individual task with the name, points, and description
 // Have a place to submit information for the task and
@@ -31,7 +32,8 @@ const Task = ({navigation, route }) => {
 
         currentUser.points += duty.points;
         console.log(currentUser.points)
-        navigation.navigate('Home');
+        navigation.navigate('Home', {key: ++increment});
+        //navigation.goBack('Home');
     }
 
     return (
