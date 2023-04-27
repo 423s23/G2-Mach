@@ -12,6 +12,7 @@ import {
     View
 } from "react-native";
 import { withNavigation } from 'react-navigation';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import {navigationRef} from "../RootNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import {StatusBar} from "expo-status-bar";
@@ -69,10 +70,9 @@ const SignUp = ({navigation}) => {
     }
 
     return ( //returns the page that the user sees
-        <View style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} behavior= "padding">
             <Image style={styles.image} source={require("../images/mach-logo.png")} />
             <StatusBar style="auto" />
-            {/*<KeyboardAvoidingView>*/}
                 <View style={styles.inputView}>
                     <TextInput
                         style={styles.TextInput}
@@ -81,7 +81,6 @@ const SignUp = ({navigation}) => {
                         onChangeText={(email) => setEmail(email)}
                     />
                 </View>
-            {/*</KeyboardAvoidingView>*/}
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
@@ -114,27 +113,22 @@ const SignUp = ({navigation}) => {
                     onChangeText={(username) => setUsername(username)}
                 />
             </View>
-            <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-                style={styles.inputView}
-            >
-                <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-                    <TextInput
-                        style={styles.TextInput}
-                        placeholder="Password"
-                        placeholderTextColor="#003f5c"
-                        secureTextEntry={true}
-                        onChangeText={(password) => setPassword(password)}
-                    />
-                </TouchableWithoutFeedback>
-            </KeyboardAvoidingView>
+            <View style={styles.inputView}>
+                <TextInput
+                    style={styles.TextInput}
+                    placeholder="Password"
+                    placeholderTextColor="#003f5c"
+                    secureTextEntry={true}
+                    onChangeText={(password) => setPassword(password)}
+                />
+            </View>
             <TouchableOpacity
                 style={styles.loginBtn}
                 onPress={() => SignIn()}
             >
                 <Text>SIGN UP</Text>
             </TouchableOpacity>
-        </View>
+            </KeyboardAvoidingView>
     );
 }
 const styles = StyleSheet.create({

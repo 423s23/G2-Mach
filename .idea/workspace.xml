@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Here's a bunch">
+    <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Check if email is in the system pre signup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Tasks.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +33,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="yarn" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "nodejs_package_manager_path": "yarn"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/MachProject/components" />
@@ -156,7 +155,7 @@
       <workItem from="1681846358866" duration="12000" />
       <workItem from="1682011454704" duration="8453000" />
       <workItem from="1682370522344" duration="10000" />
-      <workItem from="1682521958205" duration="5642000" />
+      <workItem from="1682521958205" duration="2675000" />
     </task>
     <task id="LOCAL-00001" summary="added new pages">
       <created>1678209105435</created>
@@ -263,14 +262,7 @@
       <option name="project" value="LOCAL" />
       <updated>1682204170503</updated>
     </task>
-    <task id="LOCAL-00016" summary="Here's a bunch">
-      <created>1682525009800</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1682525009800</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +294,6 @@
     <MESSAGE value="More things" />
     <MESSAGE value="commit to pull" />
     <MESSAGE value="Email alerts fixed, with email validation on sign-up" />
-    <MESSAGE value="Here's a bunch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Here's a bunch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email alerts fixed, with email validation on sign-up" />
   </component>
 </project>

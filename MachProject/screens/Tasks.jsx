@@ -37,7 +37,7 @@ const Task = ({navigation, route }) => {
     }
 
     return (
-        <View style={styles.container}>
+        <KeyboardAvoidingView style={styles.container} behavior= "padding">
             <ScrollView style={{marginTop: 10}}>
                 <View>
                     <Text style={styles.title}>{duty.title}</Text>
@@ -65,7 +65,7 @@ const Task = ({navigation, route }) => {
                     </Text>
                 </TouchableOpacity>
             </ScrollView>
-        </View>
+        </KeyboardAvoidingView>
     );
 };
 
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     },
     bubble: {
         padding: 15,
-        width: 250,
+        //width: 250,
         marginTop: 30,
         alignItems: 'center',
         justifyContent: 'center',
