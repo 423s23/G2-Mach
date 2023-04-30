@@ -193,6 +193,9 @@ function LevelBar(props){
                 </View>
                 <Text style={styles.levelBarNums}>{maxPoints}</Text>
             </View>
+            <View>
+                <Text style={[styles.text, {alignItems: 'center', justifyContent: 'center', marginBottom: 5,}]}>Recent Uploads</Text>
+            </View>
         </View>
     );
 }
@@ -226,19 +229,10 @@ const Home = ( {reload}) => {
             <View>
                 <LevelBar currentPoints={currentUser.points}/>
             </View>
-            <View>
-                <Text style={[styles.text, {alignItems: 'center', justifyContent: 'center', marginBottom: 5,}]}>Recent Uploads</Text>
-            </View>
             <View style={{ flex: 1}}>
-                <FlatList
-                    data={images}
-                    //horizontal
-                    vertical
-                    keyExtractor={(item, index) => index.toString()}
-                    renderItem={({ item }) => (
-                        <Image source={item.source} style={styles.image} />
-                    )}
-                />
+                <Image source={require('../images/homepic1.jpeg') } style={styles.image}/>
+                <Image source={require('../images/homepic2.jpeg') } style={styles.image}/>
+                <Image source={require('../images/homepic3.jpeg') } style={styles.image} />
             </View>
             </ScrollView>
         </View>

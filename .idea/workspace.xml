@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e942845-1f04-4b23-ad96-1b8c4260caf4" name="Changes" comment="Check if email is in the system pre signup">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachProject/screens/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/TaskList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/components/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/components/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachProject/screens/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/MachProject/screens/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +38,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "yarn"
   }
 }]]></component>
@@ -155,6 +160,7 @@
       <workItem from="1682011454704" duration="8453000" />
       <workItem from="1682370522344" duration="10000" />
       <workItem from="1682521958205" duration="2675000" />
+      <workItem from="1682882448033" duration="2074000" />
     </task>
     <task id="LOCAL-00001" summary="added new pages">
       <created>1678209105435</created>

@@ -16,11 +16,11 @@ import User from "./components/User.js"
 // Navigation for the App
 
 // Arrays of the users
-global.temp1 = new User ("tim1@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy1", "tim123")
-global.temp2 = new User ("tim2@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy2", "tim123")
-global.temp3 = new User ("tim3@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy3", "tim123")
+global.temp1 = new User ("tim1@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy1", "tim123", 10050)
+global.temp2 = new User ("tim2@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy2", "tim123", 1005)
+global.temp3 = new User ("tim3@gmail.com", "Tim", "Turner", "920-421-4808", "timmyy3", "tim123", 0)
 global.allUsers = [temp1, temp2, temp3]
-global.currentUser = new User("", "", "", "", "", "")
+global.currentUser = new User("", "", "", "", "", "", 0)
 const Stack = createNativeStackNavigator();
 
 export default function App() {
