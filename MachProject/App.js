@@ -27,7 +27,7 @@ export default function App() {
 
     return (
         <NavigationContainer ref={navigationRef}>
-            <Stack.Navigator>
+            <Stack.Navigator  initialRouteName={"Login"}>
                 <Stack.Screen
                     name="Navigation"
                     component={NavBar}
@@ -37,7 +37,7 @@ export default function App() {
                 <Stack.Screen name="Settings" component={Settings} />
                 <Stack.Screen name="TaskList" component={TaskList} />
                 <Stack.Screen name="Task" component={Task} />
-                <Stack.Screen name="Login" component={LoginPage} />
+                <Stack.Screen name="Login" component={LoginPage} options={{headerShown: false}}/>
                 <Stack.Screen name="Awards" component={Awards} />
                 <Stack.Screen name="Points" component={Points} />
                 <Stack.Screen name="SignUp" component={SignUp} />

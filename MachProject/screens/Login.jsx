@@ -57,7 +57,7 @@ function Login({ navigation }) {
                 if (emailval && passwordval){
                     currentUser = userElement
                     console.log(currentUser)
-                    navigationRef.current?.navigate('Home')
+                    navigationRef.current?.navigate('Navigation')
                 }
                 else if (emailval && !passwordval){
                     console.log('Incorrect password')
